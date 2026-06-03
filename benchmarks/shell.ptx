@@ -1,0 +1,11 @@
+.version 5.0
+.target sm_61
+.address_size 64
+.visible .entry test_kernel(.param .u64 ptr) {
+    .reg .b64 %rd1;
+    .reg .f32 %f1;
+    ld.param.u64 %rd1, [ptr];
+    mov.f32 %f1, 0f00000000;
+    st.global.f32 [%rd1], %f1;
+    ret;
+}

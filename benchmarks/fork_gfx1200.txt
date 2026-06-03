@@ -1,0 +1,1191 @@
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:                     (all_of FeatureGFX1250Insts, (not FeatureGFX13Insts)))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:// AMDGPU Subtarget Feature (device properties)
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureCIInsts)>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureCIInsts, (not FeatureGFX11Insts))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGCN3Encoding, FeatureDPP)>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGCN3Encoding, FeatureGFX9Insts)>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGCN3Encoding, FeatureGFX9Insts,FeatureSDWA)>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGCN3Encoding, (not FeatureGFX90AInsts))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX10_3Insts, (not FeatureGFX12Insts))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX10_AEncoding)>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX10_BEncoding)>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX10Insts)>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX10Insts,(not FeatureGFX10_3Insts))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX10Insts, (not FeatureGFX11Insts))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX10Insts, (not FeatureGFX12Insts))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX11_7Insts, (not FeatureGFX12Insts))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX11Insts)>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX11Insts, (any_of FeatureGFX13Insts, (not FeatureGFX1250Insts)))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX11Insts, (not FeatureGFX12Insts))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX11Insts, (not FeatureGFX12Insts), (not FeatureGFX11_7Insts))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX11Insts, (not FeatureGFX13Insts))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX1250Insts)>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX1250Insts, (not FeatureGFX13Insts))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX12Insts)>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX12Insts)>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX12Insts)>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX12Insts, (any_of FeatureGFX13Insts, (not FeatureGFX1250Insts)))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX12Insts, (not FeatureGFX1250Insts))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX12Insts, (not FeatureGFX13Insts))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX13Insts)>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX13Insts)>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX7GFX8GFX9Insts)>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX8Insts)>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX8Insts)>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX8Insts, FeatureGCN3Encoding)>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX8Insts, FeatureGCN3Encoding, (not FeatureGFX90AInsts))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX8Insts, FeatureGCN3Encoding, (not FeatureGFX940Insts))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX8Insts, (not FeatureGFX11Insts))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX8Insts, (not FeatureGFX12Insts))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX8Insts, (not FeatureGFX13Insts))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX90AInsts)>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX90AInsts)>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX90AInsts, (not FeatureGFX940Insts))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX940Insts)>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX9Insts)>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX9Insts)>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX9Insts)>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX9Insts, (not FeatureGFX11Insts))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX9Insts, (not FeatureGFX12Insts))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX9Insts, (not FeatureSRAMECC))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureMAIInsts, (not FeatureGFX940Insts))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:                      AssemblerPredicate<(all_of FeatureRequiresAlignedVGPRs)>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureSouthernIslands)>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureTrue16BitInsts)>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureTrue16BitInsts, FeatureRealTrue16Insts)>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureTrue16BitInsts, FeatureRealTrue16Insts, (not FeatureD16Writes32BitVgpr))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  // AssemblerPredicate<(all_of FeatureTrue16BitInsts, (not FeatureRealTrue16Insts))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate <(all_of FeatureVolcanicIslands)>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate <(all_of FeatureWavefrontSize32)>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate <(all_of FeatureWavefrontSize64)>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of (not FeatureFP8E5M3Insts))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of (not FeatureGCN3Encoding))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of (not FeatureGCN3Encoding), FeatureCIInsts)>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of (not FeatureGCN3Encoding), FeatureCIInsts, (not FeatureGFX10Insts))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of (not FeatureGCN3Encoding), FeatureCIInsts, (not FeatureGFX11Insts))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of (not FeatureGCN3Encoding), FeatureGFX10Insts, FeatureDPP)>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of (not FeatureGCN3Encoding), FeatureGFX10Insts, FeatureDPP8)>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of (not FeatureGCN3Encoding), FeatureGFX10Insts, FeatureSDWA)>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of (not FeatureGCN3Encoding), (not FeatureGFX10Insts))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of (not FeatureGCN3Encoding), (not FeatureGFX11Insts))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of (not FeatureGFX10Insts))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of (not FeatureGFX10Insts), (not FeatureGFX90AInsts))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of (not FeatureGFX11Insts))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of (not FeatureGFX1250Insts))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of (not FeatureGFX12Insts))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of (not FeatureGFX90AInsts))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of (not FeatureGFX940Insts))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of (not FeatureGFX9Insts), FeatureSDWA)>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of (not FeatureMAIInsts))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of (not FeatureNoSdstCMPX))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:                      AssemblerPredicate<(all_of (not FeatureRequiresAlignedVGPRs))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of (not FeatureRestrictedSOffset))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of (not FeatureSALUFloatInsts))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of (not FeatureTrue16BitInsts))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of (not FeatureUnpackedD16VMem))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:          AssemblerPredicate<(any_of !cast<SubtargetFeature>("Feature"#NAME))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(any_of FeatureAtomicBufferGlobalPkAddF16NoRtnInsts, FeatureAtomicBufferGlobalPkAddF16Insts)>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(any_of FeatureDot1Insts, FeatureDot8Insts)>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(any_of FeatureGFX10_3Insts)>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(any_of FeatureGFX10_3Insts, FeatureGFX940Insts)>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(any_of FeatureGFX10Insts, FeatureGFX940Insts)>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(any_of FeatureGFX1250Insts)>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(any_of FeatureGFX1250Insts)>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(any_of FeatureGFX1250Insts)>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(any_of FeatureGFX1250Insts)>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(any_of FeatureGFX13Insts, (all_of FeatureGFX11Insts, (not FeatureGFX1250Insts)))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(any_of FeatureGFX13Insts, (all_of (not FeatureGFX90AInsts), (not FeatureGFX1250Insts)))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(any_of FeatureGFX90AInsts, FeatureGFX1250Insts)>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(any_of FeatureGFX940Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(any_of FeatureGFX940Insts, FeatureGFX11Insts)>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td://                      AssemblerPredicate<(any_of FeatureMadMixInsts)>
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate <(any_of FeatureWavefrontSize32,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate <(any_of FeatureWavefrontSize64,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(not (all_of FeatureTrue16BitInsts, FeatureRealTrue16Insts))>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:class FeatureMaxHardClauseLength<int size> : SubtargetFeature<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:class FeatureMaxPrivateElementSize<int size> : SubtargetFeature<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:class FeatureSet<list<SubtargetFeature> Features_> {
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:class GCNSubtargetFeatureGeneration <string Value,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:class SubtargetFeatureInstCacheLineSize <int Value> : SubtargetFeature <
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:class SubtargetFeatureLDSBankCount <int Value> : SubtargetFeature <
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureAtomicBufferGlobalPkAddF16NoRtnInsts
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureCuMode : SubtargetFeature<"cumode",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureDPP8 : SubtargetFeature<"dpp8",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureDPP : SubtargetFeature<"dpp",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureDumpCodeLower : SubtargetFeature <"dumpcode",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureEnableDS128 : SubtargetFeature<"enable-ds128",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureEnableFlatScratch : SubtargetFeature<"enable-flat-scratch",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureEnableLoadStoreOpt : SubtargetFeature <"load-store-opt",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureEnablePRTStrictNull : SubtargetFeature<"enable-prt-strict-null",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureEnableSIScheduler : SubtargetFeature<"si-scheduler",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureEnableUnsafeDSOffsetFolding : SubtargetFeature <
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureGFX10 : GCNSubtargetFeatureGeneration<"GFX10",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureGFX11 : GCNSubtargetFeatureGeneration<"GFX11",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureGFX1250B0 : SubtargetFeature<"gfx1250-b0-specific",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureGFX12 : GCNSubtargetFeatureGeneration<"GFX12",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureGFX13 : GCNSubtargetFeatureGeneration<"GFX13",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureGFX9 : GCNSubtargetFeatureGeneration<"GFX9",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureInstCacheLineSize128 : SubtargetFeatureInstCacheLineSize<128>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureInstCacheLineSize64  : SubtargetFeatureInstCacheLineSize<64>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion10_1_0 : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion10_1_1 : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion10_1_2 : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion10_1_3 : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion10_1_Common : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion10_1_Generic : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion10_3_0 : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion10_3_Generic: FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion10_Common : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion11_0_0 : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion11_0_1 : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion11_0_2 : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion11_0_3 : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion11_0_Common : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion11_5_0 : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion11_5_1 : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion11_5_2 : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion11_5_3 : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion11_5_Common : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion11_7_Common : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion11_Common : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion11_Generic: FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion12_50_Common : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion12_50 : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion12_51 : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion12_5_Generic: FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion12 : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion12_Generic: FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion13 : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion6_0_0 : FeatureSet<[FeatureSouthernIslands,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion6_0_1 : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion6_0_2 : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion7_0_0 : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion7_0_1 : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion7_0_2 : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion7_0_3 : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion7_0_4 : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion7_0_5 : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion8_0_1 : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion8_0_2 : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion8_0_3 : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion8_0_5 : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion8_0_Common : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion8_1_0 : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion9_0_0 : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion9_0_2 : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion9_0_4 : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion9_0_6 : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion9_0_8 : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion9_0_9 : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion9_0_A : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion9_0_C : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion9_0_Common : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion9_0_Consumer_Common : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion9_0_MI_Common : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion9_4_2 : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion9_4_Common : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion9_4_Generic : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion9_5_0 : FeatureSet<FeatureISAVersion9_5_Common.Features>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion9_5_Common : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion9_Generic : FeatureSet<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureLDSBankCount16 : SubtargetFeatureLDSBankCount<16>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureLDSBankCount32 : SubtargetFeatureLDSBankCount<32>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureMaxHardClauseLength32 : FeatureMaxHardClauseLength<32>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureMaxHardClauseLength63 : FeatureMaxHardClauseLength<63>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureMaxPrivateElementSize16 : FeatureMaxPrivateElementSize<16>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureMaxPrivateElementSize4 : FeatureMaxPrivateElementSize<4>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureMaxPrivateElementSize8 : FeatureMaxPrivateElementSize<8>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureMemoryAtomicFAddF32DenormalSupport
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  def Feature#NAME : SubtargetFeature<FeatureString,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeaturePreciseMemory
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureRealTrue16Insts : SubtargetFeature<"real-true16",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureRequiresAlignedVGPRs : SubtargetFeature<"vgpr-align2",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureRequiresCOV6 : SubtargetFeature<"requires-cov6",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureSeaIslands : GCNSubtargetFeatureGeneration<"SEA_ISLANDS",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureSouthernIslands : GCNSubtargetFeatureGeneration<"SOUTHERN_ISLANDS",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureSRAMECC : SubtargetFeature<"sramecc",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureSupportsSRAMECC : SubtargetFeature<"sramecc-support",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureSupportsXNACK : SubtargetFeature<"xnack-support",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureTgSplit : SubtargetFeature<"tgsplit",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureUseAddPC64Inst : SubtargetFeature<"use-add-pc64-inst",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureUseBlockVGPROpsForCSR : SubtargetFeature<"block-vgpr-csr",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureUseFlatForGlobal : SubtargetFeature<"flat-for-global",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureVolcanicIslands : GCNSubtargetFeatureGeneration<"VOLCANIC_ISLANDS",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureWaitsBeforeSystemScopeStores : SubtargetFeature<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureXNACK : SubtargetFeature<"xnack",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm 1024AddressableVGPRs : AMDGPUSubtargetFeature<"1024-addressable-vgprs",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm 1536VGPRs : AMDGPUSubtargetFeature<"1536-physical-vgprs",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm 16BitInsts : AMDGPUSubtargetFeature<"16-bit-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm 45BitNumRecordsBufferResource : AMDGPUSubtargetFeature<"45-bit-num-records-buffer-resource",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm 64BitLiterals : AMDGPUSubtargetFeature<"64-bit-literals",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm A16 : AMDGPUSubtargetFeature<"a16",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm AddMinMaxInsts : AMDGPUSubtargetFeature<"add-min-max-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm AddNoCarryInsts : AMDGPUSubtargetFeature<"add-no-carry-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm AddSubU64Insts : AMDGPUSubtargetFeature<"add-sub-u64-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm AgentScopeFineGrainedRemoteMemoryAtomics : AMDGPUSubtargetFeature<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm ApertureRegs : AMDGPUSubtargetFeature<"aperture-regs",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm ArchitectedFlatScratch : AMDGPUSubtargetFeature<"architected-flat-scratch",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm ArchitectedSGPRs : AMDGPUSubtargetFeature<"architected-sgprs",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm AshrPkInsts : AMDGPUSubtargetFeature<"ashr-pk-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm AssemblerPermissiveWavesize : AMDGPUSubtargetFeature<"assembler-permissive-wavesize",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm Asynccnt : AMDGPUSubtargetFeature<"asynccnt",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm AtomicBufferGlobalPkAddF16Insts : AMDGPUSubtargetFeature<"atomic-buffer-global-pk-add-f16-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm AtomicBufferPkAddBF16Inst : AMDGPUSubtargetFeature<"atomic-buffer-pk-add-bf16-inst",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm AtomicCSubNoRtnInsts : AMDGPUSubtargetFeature<"atomic-csub-no-rtn-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm AtomicDsPkAdd16Insts : AMDGPUSubtargetFeature<"atomic-ds-pk-add-16-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm AtomicFaddNoRtnInsts : AMDGPUSubtargetFeature<"atomic-fadd-no-rtn-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm AtomicFaddRtnInsts : AMDGPUSubtargetFeature<"atomic-fadd-rtn-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm AtomicFlatPkAdd16Insts : AMDGPUSubtargetFeature<"atomic-flat-pk-add-16-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm AtomicFMinFMaxF32FlatInsts : AMDGPUSubtargetFeature<"atomic-fmin-fmax-flat-f32",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm AtomicFMinFMaxF32GlobalInsts : AMDGPUSubtargetFeature<"atomic-fmin-fmax-global-f32",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm AtomicFMinFMaxF64FlatInsts : AMDGPUSubtargetFeature<"atomic-fmin-fmax-flat-f64",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm AtomicFMinFMaxF64GlobalInsts : AMDGPUSubtargetFeature<"atomic-fmin-fmax-global-f64",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm AtomicGlobalPkAddBF16Inst : AMDGPUSubtargetFeature<"atomic-global-pk-add-bf16-inst",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm AutoWaitcntBeforeBarrier : AMDGPUSubtargetFeature <"auto-waitcnt-before-barrier",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm BackOffBarrier : AMDGPUSubtargetFeature <"back-off-barrier",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td://   defm Bar : AMDGPUSubtargetFeature<"bar", "desc", 1, 1, [FeatureFoo]>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm BF16ConversionInsts : AMDGPUSubtargetFeature<"bf16-cvt-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm BF16PackedInsts : AMDGPUSubtargetFeature<"bf16-pk-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm BF16TransInsts : AMDGPUSubtargetFeature<"bf16-trans-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm BF8ConversionScaleInsts : AMDGPUSubtargetFeature<"bf8-cvt-scale-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm BitOp3Insts : AMDGPUSubtargetFeature<"bitop3-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm BVHDualAndBVH8Insts : AMDGPUSubtargetFeature<"bvh-dual-bvh-8-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm CIInsts : AMDGPUSubtargetFeature<"ci-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm Clusters : AMDGPUSubtargetFeature<"clusters",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm CubeInsts : AMDGPUSubtargetFeature<"cube-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm CvtFP8VOP1Bug : AMDGPUSubtargetFeature<"cvt-fp8-vop1-bug",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm CvtNormInsts : AMDGPUSubtargetFeature<"cvt-norm-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm CvtPkF16F32Inst : AMDGPUSubtargetFeature<"cvt-pk-f16-f32-inst",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm CvtPkNormVOP2Insts : AMDGPUSubtargetFeature<"cvt-pknorm-vop2-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm CvtPkNormVOP3Insts : AMDGPUSubtargetFeature<"cvt-pknorm-vop3-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm D16Writes32BitVgpr : AMDGPUSubtargetFeature<"d16-write-vgpr32",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm DefaultComponentBroadcast : AMDGPUSubtargetFeature<"default-component-broadcast",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm DefaultComponentZero : AMDGPUSubtargetFeature<"default-component-zero",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm DLInsts : AMDGPUSubtargetFeature<"dl-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm Dot10Insts : AMDGPUSubtargetFeature<"dot10-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm Dot11Insts : AMDGPUSubtargetFeature<"dot11-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm Dot12Insts : AMDGPUSubtargetFeature<"dot12-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm Dot13Insts : AMDGPUSubtargetFeature<"dot13-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm Dot1Insts : AMDGPUSubtargetFeature<"dot1-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm Dot2Insts : AMDGPUSubtargetFeature<"dot2-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm Dot3Insts : AMDGPUSubtargetFeature<"dot3-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm Dot4Insts : AMDGPUSubtargetFeature<"dot4-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm Dot5Insts : AMDGPUSubtargetFeature<"dot5-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm Dot6Insts : AMDGPUSubtargetFeature<"dot6-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm Dot7Insts : AMDGPUSubtargetFeature<"dot7-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm Dot8Insts : AMDGPUSubtargetFeature<"dot8-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm Dot9Insts : AMDGPUSubtargetFeature<"dot9-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm DPALU_DPP : AMDGPUSubtargetFeature<"dpp-64bit",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm DPPBroadcasts : AMDGPUSubtargetFeature<"dpp-row-bcast",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm DPPSrc1SGPR : AMDGPUSubtargetFeature<"dpp-src1-sgpr",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm DPPWavefrontShifts : AMDGPUSubtargetFeature<"dpp-wavefront-shifts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm DsSrc2Insts : AMDGPUSubtargetFeature<"ds-src2-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm DX10ClampAndIEEEMode : AMDGPUSubtargetFeature<"dx10-clamp-and-ieee-mode",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm EmulatedSystemScopeAtomics : AMDGPUSubtargetFeature<
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm ExtendedImageInsts : AMDGPUSubtargetFeature<"extended-image-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm F16BF16ToFP6BF6ConversionScaleInsts : AMDGPUSubtargetFeature<"f16bf16-to-fp6bf6-cvt-scale-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm F32ToF16BF16ConversionSRInsts : AMDGPUSubtargetFeature<"f32-to-f16bf16-cvt-sr-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm FastDenormalF32 : AMDGPUSubtargetFeature<"fast-denormal-f32",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm FastFMAF32 : AMDGPUSubtargetFeature<"fast-fmaf",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm FlatAddressSpace : AMDGPUSubtargetFeature<"flat-address-space",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm FlatAtomicFaddF32Inst : AMDGPUSubtargetFeature<"flat-atomic-fadd-f32-inst",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm FlatBufferGlobalAtomicFaddF64Inst : AMDGPUSubtargetFeature<"flat-buffer-global-fadd-f64-inst",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm FlatGlobalInsts : AMDGPUSubtargetFeature<"flat-global-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm FlatGVSMode : AMDGPUSubtargetFeature<"flat-gvs-mode",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm FlatInstOffsets : AMDGPUSubtargetFeature<"flat-inst-offsets",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm FlatScratchInsts : AMDGPUSubtargetFeature<"flat-scratch-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm FlatSegmentOffsetBug : AMDGPUSubtargetFeature<"flat-segment-offset-bug",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm FlatSignedOffset : AMDGPUSubtargetFeature<"flat-signed-offset",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm FmacF64Inst : AMDGPUSubtargetFeature<"fmacf64-inst",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm FmaMixBF16Insts : AMDGPUSubtargetFeature<"fma-mix-bf16-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm FmaMixInsts : AMDGPUSubtargetFeature<"fma-mix-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td://   defm Foo : AMDGPUSubtargetFeature<"foo", "desc", 1, 0>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm FormattedMUBUFInsts : AMDGPUSubtargetFeature<"formatted-mubuf-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm FP4ConversionScaleInsts : AMDGPUSubtargetFeature<"fp4-cvt-scale-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm FP6BF6ConversionScaleInsts : AMDGPUSubtargetFeature<"fp6bf6-cvt-scale-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm FP8ConversionInsts : AMDGPUSubtargetFeature<"fp8-conversion-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm FP8ConversionScaleInsts : AMDGPUSubtargetFeature<"fp8-cvt-scale-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm FP8E5M3Insts : AMDGPUSubtargetFeature<"fp8e5m3-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm FP8Insts : AMDGPUSubtargetFeature<"fp8-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm FullRate64Ops : AMDGPUSubtargetFeature<"full-rate-64-ops",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm G16 : AMDGPUSubtargetFeature<"g16",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm GCN3Encoding : AMDGPUSubtargetFeature<"gcn3-encoding",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm GDS : AMDGPUSubtargetFeature<"gds",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm GetWaveIdInst : AMDGPUSubtargetFeature<"get-wave-id-inst",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm GFX10_3Insts : AMDGPUSubtargetFeature<"gfx10-3-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm GFX10_AEncoding : AMDGPUSubtargetFeature<"gfx10_a-encoding",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm GFX10_BEncoding : AMDGPUSubtargetFeature<"gfx10_b-encoding",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm GFX10Insts : AMDGPUSubtargetFeature<"gfx10-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm GFX11_7Insts : AMDGPUSubtargetFeature<"gfx11-7-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm GFX11Insts : AMDGPUSubtargetFeature<"gfx11-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm GFX1250Insts : AMDGPUSubtargetFeature<"gfx1250-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm GFX12Insts : AMDGPUSubtargetFeature<"gfx12-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm GFX13Insts : AMDGPUSubtargetFeature<"gfx13-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm GFX7GFX8GFX9Insts : AMDGPUSubtargetFeature<"gfx7-gfx8-gfx9-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm GFX8Insts : AMDGPUSubtargetFeature<"gfx8-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm GFX90AInsts : AMDGPUSubtargetFeature<"gfx90a-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm GFX940Insts : AMDGPUSubtargetFeature<"gfx940-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm GFX950Insts : AMDGPUSubtargetFeature<"gfx950-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm GFX9Insts : AMDGPUSubtargetFeature<"gfx9-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm GloballyAddressableScratch : AMDGPUSubtargetFeature<"globally-addressable-scratch",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm GWS : AMDGPUSubtargetFeature<"gws",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm HalfRate64Ops : AMDGPUSubtargetFeature<"half-rate-64-ops",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm IEEEMinimumMaximumInsts : AMDGPUSubtargetFeature<"ieee-minimum-maximum-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm ImageGather4D16Bug : AMDGPUSubtargetFeature<"image-gather4-d16-bug",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm ImageInsts : AMDGPUSubtargetFeature<"image-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm ImageStoreD16Bug : AMDGPUSubtargetFeature<"image-store-d16-bug",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm InstFwdPrefetchBug : AMDGPUSubtargetFeature<"inst-fwd-prefetch-bug",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm IntClamp : AMDGPUSubtargetFeature<"int-clamp-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm Inv2PiInlineImm : AMDGPUSubtargetFeature<"inv-2pi-inline-imm",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm KernargPreload : AMDGPUSubtargetFeature <"kernarg-preload",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm LdsBarrierArriveAtomic : AMDGPUSubtargetFeature<"lds-barrier-arrive-atomic",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm LdsBranchVmemWARHazard : AMDGPUSubtargetFeature<"lds-branch-vmem-war-hazard",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm LDSMisalignedBug : AMDGPUSubtargetFeature<"lds-misaligned-bug",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm LerpInst : AMDGPUSubtargetFeature<"lerp-inst",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm LshlAddU64Inst : AMDGPUSubtargetFeature<"lshl-add-u64-inst",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm MADIntraFwdBug : AMDGPUSubtargetFeature<"mad-intra-fwd-bug",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm MadMacF32Insts : AMDGPUSubtargetFeature<"mad-mac-f32-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm MadMixInsts : AMDGPUSubtargetFeature<"mad-mix-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td://   defm MadMixInsts : AMDGPUSubtargetFeature<"mad-mix-insts", "description">;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm MadNC64_32Insts : AMDGPUSubtargetFeature<"mad-nc-64-32-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm MadU32Inst : AMDGPUSubtargetFeature<"mad-u32-inst",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm MAIInsts : AMDGPUSubtargetFeature<"mai-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm McastLoadInsts : AMDGPUSubtargetFeature<"mcast-load-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm MFMAInlineLiteralBug : AMDGPUSubtargetFeature<"mfma-inline-literal-bug",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm MIMG_R128 : AMDGPUSubtargetFeature<"mimg-r128",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm Min3Max3PKF16 : AMDGPUSubtargetFeature<"min3-max3-pkf16",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm Minimum3Maximum3F16 : AMDGPUSubtargetFeature<"minimum3-maximum3-f16",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm Minimum3Maximum3F32 : AMDGPUSubtargetFeature<"minimum3-maximum3-f32",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm Minimum3Maximum3PKF16 : AMDGPUSubtargetFeature<"minimum3-maximum3-pkf16",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm MinMaxI64Insts : AMDGPUSubtargetFeature<"min-max-i64-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm Movrel : AMDGPUSubtargetFeature<"movrel",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm MqsadInsts : AMDGPUSubtargetFeature<"mqsad-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm MqsadPkInsts : AMDGPUSubtargetFeature<"mqsad-pk-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm MSAALoadDstSelBug : AMDGPUSubtargetFeature<"msaa-load-dst-sel-bug",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm MsadInsts : AMDGPUSubtargetFeature<"msad-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm MTBUFInsts : AMDGPUSubtargetFeature<"mtbuf-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm NegativeScratchOffsetBug : AMDGPUSubtargetFeature<"negative-scratch-offset-bug",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm NegativeUnalignedScratchOffsetBug : AMDGPUSubtargetFeature<"negative-unaligned-scratch-offset-bug",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm NoDataDepHazard : AMDGPUSubtargetFeature<"no-data-dep-hazard",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm NoF16PseudoScalarTransInlineConstants : AMDGPUSubtargetFeature<"no-f16-pseudo-scalar-trans-inline-constants",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm NoSdstCMPX : AMDGPUSubtargetFeature<"no-sdst-cmpx",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm NSAClauseBug : AMDGPUSubtargetFeature<"nsa-clause-bug",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm NSAEncoding : AMDGPUSubtargetFeature<"nsa-encoding",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm NSAtoVMEMBug : AMDGPUSubtargetFeature<"nsa-to-vmem-bug",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm Offset3fBug : AMDGPUSubtargetFeature<"offset-3f-bug",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm PackedFP32Ops : AMDGPUSubtargetFeature<"packed-fp32-ops",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm PackedTID : AMDGPUSubtargetFeature<"packed-tid",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm PartialNSAEncoding : AMDGPUSubtargetFeature<"partial-nsa-encoding",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm Permlane16Swap : AMDGPUSubtargetFeature<"permlane16-swap",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm Permlane32Swap : AMDGPUSubtargetFeature<"permlane32-swap",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm PkAddMinMaxInsts : AMDGPUSubtargetFeature<"pk-add-min-max-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm PkFmacF16Inst : AMDGPUSubtargetFeature<"pk-fmac-f16-inst",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm PointSampleAccel : AMDGPUSubtargetFeature<"point-sample-accel",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm PrivEnabledTrap2NopBug : AMDGPUSubtargetFeature<"priv-enabled-trap2-nop-bug",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm PrngInst : AMDGPUSubtargetFeature<"prng-inst",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm PseudoScalarTrans : AMDGPUSubtargetFeature<"pseudo-scalar-trans",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm QsadInsts : AMDGPUSubtargetFeature<"qsad-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm R128A16 : AMDGPUSubtargetFeature<"r128-a16",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm RelaxedBufferOOBMode : AMDGPUSubtargetFeature<"relaxed-buffer-oob-mode",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm RequiredExportPriority : AMDGPUSubtargetFeature<"required-export-priority",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm RestrictedSOffset : AMDGPUSubtargetFeature<"restricted-soffset",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm SadInsts : AMDGPUSubtargetFeature<"sad-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm SafeCUPrefetch : AMDGPUSubtargetFeature<"safe-cu-prefetch",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm SafeSmemPrefetch : AMDGPUSubtargetFeature<"safe-smem-prefetch",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm SALUFloatInsts : AMDGPUSubtargetFeature<"salu-float",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm SALUMinimumMaximumInsts : AMDGPUSubtargetFeature<"salu-minimum-maximum-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm SBarrierLeaveImm : AMDGPUSubtargetFeature<"s-barrier-leave-imm",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm ScalarAtomics : AMDGPUSubtargetFeature<"scalar-atomics",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm ScalarDwordx3Loads : AMDGPUSubtargetFeature<"scalar-dwordx3-loads",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm ScalarFlatScratchInsts : AMDGPUSubtargetFeature<"scalar-flat-scratch-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm ScalarStores : AMDGPUSubtargetFeature<"scalar-stores",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm SDWA : AMDGPUSubtargetFeature<"sdwa",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm SDWAMac : AMDGPUSubtargetFeature<"sdwa-mav",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm SDWAOmod : AMDGPUSubtargetFeature<"sdwa-omod",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm SDWAOutModsVOPC : AMDGPUSubtargetFeature<"sdwa-out-mods-vopc",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm SDWAScalar : AMDGPUSubtargetFeature<"sdwa-scalar",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm SDWASdst : AMDGPUSubtargetFeature<"sdwa-sdst",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm SetPrioIncWgInst : AMDGPUSubtargetFeature<"setprio-inc-wg-inst",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm SetregVGPRMSBFixup : AMDGPUSubtargetFeature<"setreg-vgpr-msb-fixup",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm SGPRInitBug : AMDGPUSubtargetFeature<"sgpr-init-bug",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm ShaderCyclesHiLoRegisters : AMDGPUSubtargetFeature<"shader-cycles-hi-lo-registers",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm ShaderCyclesRegister : AMDGPUSubtargetFeature<"shader-cycles-register",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm SMemRealTime : AMDGPUSubtargetFeature<"s-memrealtime",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm SMemTimeInst : AMDGPUSubtargetFeature<"s-memtime-inst",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm SMEMtoVectorWriteHazard : AMDGPUSubtargetFeature<"smem-to-vector-write-hazard",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm SWakeupBarrier : AMDGPUSubtargetFeature<"s-wakeup-barrier-inst",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm SWakeupImm : AMDGPUSubtargetFeature<"s-wakeup-imm",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm SWMMACGfx1200Insts : AMDGPUSubtargetFeature<"swmmac-gfx1200-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm SWMMACGfx1250Insts : AMDGPUSubtargetFeature<"swmmac-gfx1250-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm TanhInsts : AMDGPUSubtargetFeature<"tanh-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm TensorCvtLutInsts : AMDGPUSubtargetFeature<"tensor-cvt-lut-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm TransposeLoadF4F6Insts : AMDGPUSubtargetFeature<"transpose-load-f4f6-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm TrapHandler: AMDGPUSubtargetFeature<"trap-handler",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm TrigReducedRange : AMDGPUSubtargetFeature<"trig-reduced-range",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm True16BitInsts : AMDGPUSubtargetFeature<"true16",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm UnalignedAccessMode : AMDGPUSubtargetFeature<"unaligned-access-mode",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm UnalignedBufferAccess : AMDGPUSubtargetFeature<"unaligned-buffer-access",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm UnalignedDSAccess : AMDGPUSubtargetFeature<"unaligned-ds-access",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm UnalignedScratchAccess : AMDGPUSubtargetFeature<"unaligned-scratch-access",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm UnpackedD16VMem : AMDGPUSubtargetFeature<"unpacked-d16-vmem",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm UserSGPRInit16Bug : AMDGPUSubtargetFeature<"user-sgpr-init16-bug",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm VALUTransUseHazard : AMDGPUSubtargetFeature<"valu-trans-use-hazard",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm VcmpxExecWARHazard : AMDGPUSubtargetFeature<"vcmpx-exec-war-hazard",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm VcmpxPermlaneHazard : AMDGPUSubtargetFeature<"vcmpx-permlane-hazard",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm VGPRIndexMode : AMDGPUSubtargetFeature<"vgpr-index-mode",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm VmemPrefInsts : AMDGPUSubtargetFeature<"vmem-pref-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm VMemToLDSLoad : AMDGPUSubtargetFeature<"vmem-to-lds-load-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm VMEMtoScalarWriteHazard : AMDGPUSubtargetFeature<"vmem-to-scalar-write-hazard",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm VmemWriteVgprInOrder : AMDGPUSubtargetFeature<"vmem-write-vgpr-in-order",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm VMovB64Inst : AMDGPUSubtargetFeature<"v-mov-b64-inst",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm VMulU64Inst : AMDGPUSubtargetFeature<"v-mul-u64-inst",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm VOP3Literal : AMDGPUSubtargetFeature<"vop3-literal",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm VOP3PInsts : AMDGPUSubtargetFeature<"vop3p",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm VOPDInsts : AMDGPUSubtargetFeature<"vopd",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm Vscnt : AMDGPUSubtargetFeature<"vscnt",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm WaitXcnt : AMDGPUSubtargetFeature<"wait-xcnt",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm WMMA128bInsts : AMDGPUSubtargetFeature<"wmma-128b-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm WMMA256bInsts : AMDGPUSubtargetFeature<"wmma-256b-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm XF32Insts : AMDGPUSubtargetFeature<"xf32-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm XNACKAnyOnly : AMDGPUSubtargetFeature<"xnack-any-only",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td://   - Deps: List of dependent SubtargetFeatures (default empty).
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   Feature1024AddressableVGPRs,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   Feature1536VGPRs,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:    [Feature1536VGPRs,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:    [Feature1536VGPRs,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   Feature1536VGPRs,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:    [Feature1536VGPRs])>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   Feature45BitNumRecordsBufferResource,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   Feature64BitLiterals,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   Feature64BitLiterals,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureA16, FeatureFastDenormalF32, FeatureG16,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureA16, FeatureFastDenormalF32, FeatureG16,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureA16, FeatureFastDenormalF32, FeatureG16,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureA16, FeatureSMemTimeInst, FeatureFastDenormalF32, FeatureG16,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureA16, FeatureSMemTimeInst, FeatureFastDenormalF32, FeatureSupportsXNACK,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAddMinMaxInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAddNoCarryInsts, FeatureFmaMixInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAddNoCarryInsts, FeatureFmaMixInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAddNoCarryInsts, FeatureFmaMixInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAddNoCarryInsts, FeatureFmaMixInsts, FeatureGFX8Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAddNoCarryInsts, FeatureGFX8Insts, FeatureGFX7GFX8GFX9Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  [FeatureAddressableLocalMemorySize163840,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  [FeatureAddressableLocalMemorySize327680,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  [FeatureAddressableLocalMemorySize327680,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  [FeatureAddressableLocalMemorySize327680,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAddressableLocalMemorySize65536,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:    [FeatureAddressableLocalMemorySize65536,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAddressableLocalMemorySize65536,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAddressableLocalMemorySize65536,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:      FeatureAddressableLocalMemorySize65536,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAddSubU64Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAgentScopeFineGrainedRemoteMemoryAtomics,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAgentScopeFineGrainedRemoteMemoryAtomics, FeatureFlatOffsetBits24,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAgentScopeFineGrainedRemoteMemoryAtomics, FeatureFlatOffsetBits24,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureApertureRegs, FeatureGFX9Insts, FeatureGFX10Insts, FeatureVOP3PInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureApertureRegs, FeatureGFX9Insts, FeatureVOP3PInsts, FeatureVGPRIndexMode,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureArchitectedFlatScratch,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureArchitectedFlatScratch,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureArchitectedFlatScratch,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureArchitectedFlatScratch,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureArchitectedFlatScratch,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureArchitectedSGPRs,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureArchitectedSGPRs,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureArchitectedSGPRs,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAshrPkInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAshrPkInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAshrPkInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:                              FeatureAssemblerPermissiveWavesize)>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:                              FeatureAssemblerPermissiveWavesize)>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAsynccnt,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAtomicBufferGlobalPkAddF16Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAtomicBufferGlobalPkAddF16Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAtomicBufferGlobalPkAddF16Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureAtomicBufferGlobalPkAddF16Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAtomicBufferGlobalPkAddF16Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureAtomicBufferGlobalPkAddF16NoRtnInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAtomicBufferPkAddBF16Inst,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAtomicBufferPkAddBF16Inst
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAtomicBufferPkAddBF16Inst,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAtomicBufferPkAddBF16Inst,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAtomicDsPkAdd16Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAtomicDsPkAdd16Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAtomicDsPkAdd16Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAtomicDsPkAdd16Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAtomicFaddNoRtnInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAtomicFaddNoRtnInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAtomicFaddNoRtnInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureAtomicFaddNoRtnInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAtomicFaddNoRtnInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAtomicFaddNoRtnInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAtomicFaddRtnInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAtomicFaddRtnInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureAtomicFaddRtnInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAtomicFaddRtnInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAtomicFaddRtnInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAtomicFaddRtnInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAtomicFlatPkAdd16Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAtomicFlatPkAdd16Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAtomicFlatPkAdd16Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAtomicFlatPkAdd16Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  FeatureAtomicFMinFMaxF32FlatInsts, FeatureAtomicFMinFMaxF64FlatInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAtomicFMinFMaxF32FlatInsts, FeatureAtomicFMinFMaxF64FlatInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAtomicFMinFMaxF32GlobalInsts, FeatureAtomicFMinFMaxF32FlatInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAtomicFMinFMaxF32GlobalInsts, FeatureAtomicFMinFMaxF32FlatInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAtomicFMinFMaxF32GlobalInsts, FeatureAtomicFMinFMaxF32FlatInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  FeatureAtomicFMinFMaxF32GlobalInsts, FeatureAtomicFMinFMaxF64GlobalInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAtomicFMinFMaxF32GlobalInsts, FeatureAtomicFMinFMaxF64GlobalInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  FeatureAtomicFMinFMaxF32GlobalInsts, FeatureAtomicFMinFMaxF64GlobalInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureAtomicFMinFMaxF64FlatInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAtomicFMinFMaxF64FlatInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAtomicFMinFMaxF64FlatInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAtomicFMinFMaxF64FlatInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAtomicFMinFMaxF64GlobalInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureAtomicFMinFMaxF64GlobalInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAtomicFMinFMaxF64GlobalInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAtomicFMinFMaxF64GlobalInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAtomicGlobalPkAddBF16Inst,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAtomicGlobalPkAddBF16Inst,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAtomicGlobalPkAddBF16Inst,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureAtomicGlobalPkAddBF16Inst,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureBackOffBarrier,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureBackOffBarrier,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureBackOffBarrier,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureBackOffBarrier,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureBackOffBarrier,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureBackOffBarrier,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td://   - FeatureBar : SubtargetFeature<"bar", "HasBar", "true", "desc", [FeatureFoo]>
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureBF16ConversionInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureBF16ConversionInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureBF16ConversionInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureBF16PackedInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureBF16PackedInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureBF16TransInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureBF16TransInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureBF8ConversionScaleInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureBF8ConversionScaleInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureBitOp3Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureBitOp3Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureBitOp3Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureBVHDualAndBVH8Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureCIInsts, Feature16BitInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureCIInsts, FeatureGFX8Insts, FeatureGFX9Insts, FeatureGFX10Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureCIInsts, FeatureGFX8Insts, FeatureGFX9Insts, FeatureGFX10Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureCIInsts, FeatureGFX8Insts, FeatureGFX9Insts, FeatureGFX10Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  FeatureCIInsts, FeatureMovrel, FeatureTrigReducedRange,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureClusters,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureClusters,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureCubeInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureCubeInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureCubeInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureCubeInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureCubeInsts, FeatureLerpInst, FeatureSadInsts, FeatureQsadInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureCuMode,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:      FeatureCvtFP8VOP1Bug,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureCvtNormInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureCvtNormInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureCvtNormInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureCvtNormInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureCvtNormInsts, FeatureCvtPkNormVOP2Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureCvtNormInsts, FeatureCvtPkNormVOP2Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureCvtPkF16F32Inst,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureCvtPkF16F32Inst,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureCvtPkF16F32Inst,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureCvtPkNormVOP2Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureCvtPkNormVOP2Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureCvtPkNormVOP2Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureCvtPkNormVOP2Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureCvtPkNormVOP2Insts, FeatureCvtPkNormVOP3Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureCvtPkNormVOP2Insts, FeatureDX10ClampAndIEEEMode,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  FeatureCvtPkNormVOP2Insts, FeatureDX10ClampAndIEEEMode, FeatureMTBUFInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureCvtPkNormVOP3Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureCvtPkNormVOP3Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureCvtPkNormVOP3Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureCvtPkNormVOP3Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureCvtPkNormVOP3Insts, FeatureDX10ClampAndIEEEMode,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureCvtPkNormVOP3Insts, FeatureDX10ClampAndIEEEMode, FeatureFlatOffsetBits12,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureD16Writes32BitVgpr,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureD16Writes32BitVgpr,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureD16Writes32BitVgpr,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureDefaultComponentBroadcast, FeatureMaxHardClauseLength32,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureDefaultComponentBroadcast, FeatureMaxHardClauseLength32,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureDefaultComponentZero, FeatureMaxHardClauseLength32,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureDefaultComponentZero, FeatureMaxHardClauseLength63,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureDefaultComponentZero, FeatureVmemWriteVgprInOrder, FeatureCubeInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureDefaultComponentZero,FeatureVmemWriteVgprInOrder, FeatureVMemToLDSLoad,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureDLInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureDLInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureDLInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureDLInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureDLInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureDLInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureDLInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureDLInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureDot10Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureDot10Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureDot10Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureDot10Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureDot10Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureDot10Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureDot10Insts])>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureDot10Insts])>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureDot11Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureDot11Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureDot12Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureDot12Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureDot12Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureDot13Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureDot1Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:    [FeatureDot1Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:    [FeatureDot1Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureDot1Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureDot1Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureDot1Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureDot2Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureDot2Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureDot2Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureDot2Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureDot2Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureDot2Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureDot3Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureDot3Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureDot4Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureDot4Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureDot5Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureDot5Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureDot5Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureDot5Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureDot5Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureDot5Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureDot5Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureDot5Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureDot6Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureDot6Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureDot6Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureDot6Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureDot6Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureDot7Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureDot7Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureDot7Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureDot7Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureDot7Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureDot7Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureDot7Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureDot7Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureDot7Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureDot7Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureDot8Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureDot8Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureDot8Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureDot8Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureDot9Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureDot9Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureDPALU_DPP,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureDPALU_DPP,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureDPALU_DPP,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureDPPSrc1SGPR,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureDPPSrc1SGPR,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureDPPSrc1SGPR,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureDPPSrc1SGPR,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureDPPSrc1SGPR,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureDPPWavefrontShifts, FeatureDPPBroadcasts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureDsSrc2Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureDsSrc2Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureDsSrc2Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureDsSrc2Insts, FeatureExtendedImageInsts, FeatureFastDenormalF32,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  FeatureDsSrc2Insts, FeatureExtendedImageInsts, FeatureUnalignedBufferAccess,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  FeatureDsSrc2Insts, FeatureLDSBankCount32, FeatureMovrel,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureDX10ClampAndIEEEMode])>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureDX10ClampAndIEEEMode])>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureDX10ClampAndIEEEMode])>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  FeatureDX10ClampAndIEEEMode, FeatureInstCacheLineSize64,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureEmulatedSystemScopeAtomics,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureExtendedImageInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureExtendedImageInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureExtendedImageInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureExtendedImageInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureF16BF16ToFP6BF6ConversionScaleInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureF16BF16ToFP6BF6ConversionScaleInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureF32ToF16BF16ConversionSRInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureFastFMAF32,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:    [FeatureFastFMAF32,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureFastFMAF32]>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureFastFMAF32]>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureFastFMAF32, FeatureDPP, FeatureDPPWavefrontShifts, FeatureDPPBroadcasts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  [FeatureFlatAddressSpace]
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  [FeatureFlatAddressSpace]
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  [FeatureFlatAddressSpace]
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  [FeatureFlatAddressSpace]
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  [FeatureFlatAddressSpace]
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  [FeatureFlatAddressSpace]
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureFlatAddressSpace,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureFlatAddressSpace, Feature16BitInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureFlatAddressSpace, Feature16BitInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureFlatAddressSpace, Feature16BitInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureFlatAtomicFaddF32Inst,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureFlatAtomicFaddF32Inst,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureFlatAtomicFaddF32Inst,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureFlatAtomicFaddF32Inst,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureFlatAtomicFaddF32Inst,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureFlatBufferGlobalAtomicFaddF64Inst,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureFlatBufferGlobalAtomicFaddF64Inst,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureFlatBufferGlobalAtomicFaddF64Inst
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  [FeatureFlatGlobalInsts]
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  [FeatureFlatGlobalInsts]
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  [FeatureFlatGlobalInsts]
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  [FeatureFlatGlobalInsts]
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  [FeatureFlatGlobalInsts]
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureFlatGVSMode,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureFlatGVSMode,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureFlatInstOffsets, FeatureFlatGlobalInsts, FeatureFlatScratchInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureFlatInstOffsets, FeatureFlatGlobalInsts, FeatureFlatScratchInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureFlatInstOffsets, FeatureFlatGlobalInsts, FeatureFlatScratchInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureFlatInstOffsets, FeatureFlatGlobalInsts, FeatureFlatScratchInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureFlatInstOffsets, FeatureFlatGlobalInsts, FeatureFlatScratchInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureFlatSegmentOffsetBug,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureFlatSignedOffset, FeatureInstCacheLineSize128
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureFlatSignedOffset, FeatureInstCacheLineSize128,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureFmacF64Inst,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureFmacF64Inst,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureFmacF64Inst,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureFmacF64Inst,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureFmaMixBF16Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureFmaMixBF16Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureFmaMixInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureFmaMixInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:    [FeatureFmaMixInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:    [FeatureFmaMixInsts])>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td://   - FeatureFoo : SubtargetFeature<...>
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureFormattedMUBUFInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  FeatureFormattedMUBUFInsts
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureFP4ConversionScaleInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureFP4ConversionScaleInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  [FeatureFP64,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  [FeatureFP64, FeatureAddressableLocalMemorySize32768, FeatureMIMG_R128,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  [FeatureFP64, FeatureAddressableLocalMemorySize65536, FeatureMIMG_R128,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  [FeatureFP64, FeatureAddressableLocalMemorySize65536, FeatureMIMG_R128,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  [FeatureFP64, FeatureAddressableLocalMemorySize65536, FeatureMIMG_R128,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  [FeatureFP64, FeatureAddressableLocalMemorySize65536, FeatureMIMG_R128,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  [FeatureFP64, FeatureMIMG_R128,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  [FeatureFP64, FeatureMIMG_R128,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureFP6BF6ConversionScaleInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureFP6BF6ConversionScaleInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:      FeatureFP8ConversionInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureFP8ConversionInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureFP8ConversionInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureFP8ConversionInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureFP8ConversionInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  [FeatureFP8ConversionInsts]
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureFP8ConversionInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureFP8ConversionScaleInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureFP8ConversionScaleInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureFP8E5M3Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:      FeatureFP8Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureFP8Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureFullRate64Ops,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureFullRate64Ops,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureGCN3Encoding, FeatureCIInsts, Feature16BitInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureGCN3Encoding, FeatureCIInsts, Feature16BitInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:    [FeatureGDS,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureGDS])>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  FeatureGDS, FeatureGWS, FeatureDefaultComponentZero,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureGetWaveIdInst,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  [FeatureGFX10,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureGFX10_3Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:    [FeatureGFX10_AEncoding,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:    [FeatureGFX10_AEncoding])>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureGFX10_AEncoding, FeatureGFX10_BEncoding, FeatureGFX10_3Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureGFX10_AEncoding, FeatureGFX10_BEncoding, FeatureGFX10_3Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureGFX10_AEncoding, FeatureGFX10_BEncoding, FeatureGFX10_3Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureGFX10_BEncoding,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  [FeatureGFX11,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:    [FeatureGFX11_7Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureGFX11Insts, FeatureGFX12Insts, FeatureGFX13Insts, FeatureVOP3PInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureGFX11Insts, FeatureGFX12Insts, FeatureVOP3PInsts, FeatureVOPDInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureGFX11Insts, FeatureVOP3PInsts, FeatureVOPDInsts, FeatureTrue16BitInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  [FeatureGFX12,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  [FeatureGFX12,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureGFX1250Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureGFX1250Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  [FeatureGFX13,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureGFX7GFX8GFX9Insts, FeatureSMemTimeInst, FeatureMadMacF32Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  FeatureGFX7GFX8GFX9Insts, FeatureSMemTimeInst, FeatureMadMacF32Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  [FeatureGFX9,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  [FeatureGFX9,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureGFX90AInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:    [FeatureGFX90AInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureGFX940Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureGFX950Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureGloballyAddressableScratch,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureGloballyAddressableScratch,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureHalfRate64Ops,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:    [FeatureHalfRate64Ops,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureHalfRate64Ops,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureHalfRate64Ops,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureHalfRate64Ops,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureIEEEMinimumMaximumInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureIEEEMinimumMaximumInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureIEEEMinimumMaximumInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureIEEEMinimumMaximumInsts, FeatureSALUMinimumMaximumInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureIEEEMinimumMaximumInsts, FeatureSALUMinimumMaximumInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:    [FeatureImageGather4D16Bug,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureImageGather4D16Bug]>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureImageGather4D16Bug])>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureImageInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureImageInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureImageInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  FeatureImageInsts, FeatureGDS, FeatureGWS, FeatureDefaultComponentZero,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureImageStoreD16Bug,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureInstCacheLineSize128, FeatureMTBUFInsts, FeatureFormattedMUBUFInsts
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  FeatureInstCacheLineSize64,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureInstCacheLineSize64, FeatureMTBUFInsts, FeatureFormattedMUBUFInsts
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureInstCacheLineSize64, FeatureMTBUFInsts, FeatureFormattedMUBUFInsts
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureInstCacheLineSize64, FeatureMTBUFInsts, FeatureFormattedMUBUFInsts
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureInstFwdPrefetchBug,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureIntClamp, FeatureSDWA, FeatureSDWAOmod, FeatureSDWAScalar, FeatureSDWASdst,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureIntClamp, FeatureTrigReducedRange, FeatureGFX8Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureInv2PiInlineImm, FeatureApertureRegs,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureInv2PiInlineImm, FeatureApertureRegs,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureInv2PiInlineImm, FeatureApertureRegs,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureKernargPreload,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureKernargPreload,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureKernargPreload,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureLDSBankCount16,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureLDSBankCount16,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureLDSBankCount16]>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureLDSBankCount16]>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureLDSBankCount32,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureLDSBankCount32,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureLDSBankCount32,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureLDSBankCount32,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureLDSBankCount32,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureLDSBankCount32,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureLDSBankCount32,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureLDSBankCount32,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureLDSBankCount32,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureLDSBankCount32]>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureLDSBankCount32]>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureLDSBankCount32]>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureLDSBankCount32]>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureLDSBankCount32]>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureLdsBarrierArriveAtomic,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureLdsBranchVmemWARHazard,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureLDSMisalignedBug,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureLerpInst,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureLerpInst,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureLerpInst,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureLerpInst,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureLerpInst, FeatureSadInsts, FeatureQsadInsts, FeatureMsadInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureLerpInst, FeatureSadInsts, FeatureQsadInsts, FeatureMsadInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureLshlAddU64Inst,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureLshlAddU64Inst,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureMADIntraFwdBug,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureMADIntraFwdBug,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureMadMacF32Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureMadMacF32Insts]>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:    [FeatureMadMixInsts])>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:    [FeatureMadMixInsts])>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:    [FeatureMadMixInsts])>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:    [FeatureMadMixInsts])>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td://   - FeatureMadMixInsts : SubtargetFeature<"mad-mix-insts", "HasMadMixInsts", "true", "description">
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureMadNC64_32Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureMadU32Inst,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureMAIInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureMAIInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureMaxHardClauseLength32,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureMaxHardClauseLength63,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureMcastLoadInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureMemoryAtomicFAddF32DenormalSupport,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureMemoryAtomicFAddF32DenormalSupport,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureMemoryAtomicFAddF32DenormalSupport,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureMemoryAtomicFAddF32DenormalSupport,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureMFMAInlineLiteralBug,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureMin3Max3PKF16,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureMinimum3Maximum3F16,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureMinimum3Maximum3F32,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureMinimum3Maximum3F32,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureMinimum3Maximum3F32, FeatureMinimum3Maximum3F16,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureMinimum3Maximum3F32, FeatureMinimum3Maximum3F16,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureMinimum3Maximum3PKF16,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureMinimum3Maximum3PKF16,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureMinMaxI64Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureMovrel, FeatureFastFMAF32, FeatureDPP, FeatureIntClamp,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureMovrel, FeatureFastFMAF32, FeatureDPP, FeatureIntClamp,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureMovrel, FeatureFastFMAF32, FeatureDPP, FeatureIntClamp,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureMqsadInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureMqsadInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureMqsadInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureMqsadInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureMqsadInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureMqsadInsts]>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureMqsadInsts, FeatureCvtNormInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  FeatureMqsadInsts, FeatureCvtPkNormVOP2Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureMqsadPkInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureMqsadPkInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureMqsadPkInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureMqsadPkInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureMqsadPkInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureMqsadPkInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureMqsadPkInsts, FeatureMqsadInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureMqsadPkInsts, FeatureMqsadInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:    [FeatureMSAALoadDstSelBug,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:    [FeatureMSAALoadDstSelBug,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureMsadInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureMsadInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureMsadInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureMsadInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureMsadInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureMsadInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureMsadInsts, FeatureMqsadPkInsts, FeatureMqsadInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureMTBUFInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  FeatureMTBUFInsts, FeatureFormattedMUBUFInsts
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureMTBUFInsts, FeatureFormattedMUBUFInsts
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureNegativeUnalignedScratchOffsetBug])>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureNoDataDepHazard, FeaturePkFmacF16Inst,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureNoDataDepHazard, FeaturePkFmacF16Inst,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureNoDataDepHazard, FeaturePkFmacF16Inst,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureNoDataDepHazard, FeaturePkFmacF16Inst,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureNoF16PseudoScalarTransInlineConstants,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureNoF16PseudoScalarTransInlineConstants,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureNoF16PseudoScalarTransInlineConstants])>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureNoSdstCMPX, FeatureVscnt,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureNoSdstCMPX, FeatureVscnt,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureNoSdstCMPX, FeatureVscnt,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureNoSdstCMPX, FeatureVscnt,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureNSAClauseBug,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureNSAEncoding,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureNSAEncoding,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureNSAEncoding,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureNSAEncoding,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureNSAtoVMEMBug,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureOffset3fBug,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeaturePackedFP32Ops,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeaturePackedFP32Ops,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeaturePackedFP32Ops,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeaturePackedTID,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeaturePackedTID,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeaturePackedTID,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeaturePackedTID,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeaturePackedTID,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeaturePackedTID,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeaturePartialNSAEncoding,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeaturePartialNSAEncoding,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeaturePartialNSAEncoding,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeaturePermlane16Swap,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeaturePermlane16Swap,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  [FeaturePermlane16Swap,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeaturePermlane32Swap,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeaturePkAddMinMaxInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeaturePkFmacF16Inst,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeaturePkFmacF16Inst,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeaturePointSampleAccel])>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:    [FeaturePointSampleAccel])>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:    [FeaturePointSampleAccel])>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeaturePrivEnabledTrap2NopBug,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeaturePrivEnabledTrap2NopBug,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeaturePrngInst,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeaturePrngInst,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeaturePrngInst,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeaturePseudoScalarTrans,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeaturePseudoScalarTrans,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeaturePseudoScalarTrans,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureQsadInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureQsadInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureQsadInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureQsadInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureRealTrue16Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureRealTrue16Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureRealTrue16Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureRequiredExportPriority,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureRequiredExportPriority,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureRequiresAlignedVGPRs,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureRequiresAlignedVGPRs,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureRequiresAlignedVGPRs,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureRequiresCOV6,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureRequiresCOV6,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureRequiresCOV6])>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:    [FeatureRequiresCOV6])>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:    [FeatureRequiresCOV6])>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:    [FeatureRequiresCOV6])>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:    [FeatureRequiresCOV6])>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureRestrictedSOffset,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureRestrictedSOffset,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureRestrictedSOffset,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureSadInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureSadInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureSadInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureSadInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  FeatureSadInsts, FeatureMsadInsts, FeatureMqsadPkInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureSadInsts, FeatureQsadInsts, FeatureMsadInsts, FeatureMqsadPkInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  FeatureSadInsts, FeatureQsadInsts, FeatureMsadInsts, FeatureMqsadPkInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureSALUFloatInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureSALUFloatInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureSALUFloatInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:    [FeatureSALUFloatInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureSALUFloatInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureSBarrierLeaveImm,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureScalarAtomics,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureScalarDwordx3Loads,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureScalarDwordx3Loads,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureScalarDwordx3Loads,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureScalarFlatScratchInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureScalarFlatScratchInsts, FeatureScalarAtomics, FeatureR128A16,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:    [FeatureScalarStores,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureScalarStores, FeatureInv2PiInlineImm,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureSDWA, FeatureSDWAOmod, FeatureSDWAScalar, FeatureSDWASdst,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureSDWA, FeatureSDWAOutModsVOPC, FeatureSDWAMac, FeatureDPP,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  [FeatureSeaIslands,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  [FeatureSeaIslands,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  [FeatureSeaIslands,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  [FeatureSeaIslands,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  [FeatureSeaIslands,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  [FeatureSeaIslands,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureSetPrioIncWgInst,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureSetregVGPRMSBFixup,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureSetregVGPRMSBFixup,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:    [FeatureSGPRInitBug])>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:    [FeatureSGPRInitBug])>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureShaderCyclesHiLoRegisters,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureShaderCyclesHiLoRegisters,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureShaderCyclesRegister,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureShaderCyclesRegister,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureShaderCyclesRegister])>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureSMemRealTime, FeatureInv2PiInlineImm,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureSMemRealTime, FeatureScalarStores, FeatureInv2PiInlineImm,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureSMemRealTime, FeatureVGPRIndexMode, FeatureMovrel,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureSMEMtoVectorWriteHazard,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  [FeatureSouthernIslands,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  [FeatureSouthernIslands,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td://   - FeatureString: The feature string used in the SubtargetFeature.
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureSupportsSRAMECC,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureSupportsSRAMECC,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureSupportsSRAMECC])>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureSupportsSRAMECC])>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureSupportsXNACK,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureSupportsXNACK,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureSupportsXNACK,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureSupportsXNACK])>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureSWakeupBarrier,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureSWakeupBarrier,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  [FeatureSWakeupImm,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureSWMMACGfx1200Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureSWMMACGfx1200Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureSWMMACGfx1200Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureSWMMACGfx1200Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureSWMMACGfx1250Insts])>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureSWMMACGfx1250Insts])>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureTanhInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureTanhInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureTensorCvtLutInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureTensorCvtLutInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureTransposeLoadF4F6Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureTransposeLoadF4F6Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  FeatureTrigReducedRange, FeatureExtendedImageInsts, FeatureImageInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureUnalignedBufferAccess, FeatureImageInsts, FeatureGDS, FeatureGWS,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureUnalignedBufferAccess, FeatureUnalignedScratchAccess,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureUnalignedBufferAccess, FeatureUnalignedScratchAccess,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureUnalignedBufferAccess, FeatureUnalignedScratchAccess,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureUnalignedBufferAccess, FeatureUnalignedScratchAccess,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureUnalignedBufferAccess, FeatureUnalignedScratchAccess, FeatureImageInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureUnalignedDSAccess, FeatureGDS, FeatureGWS,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureUnalignedDSAccess, FeatureImageInsts, FeatureGDS, FeatureGWS,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureUnalignedDSAccess, FeatureNegativeScratchOffsetBug, FeatureGWS,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureUnalignedDSAccess, FeatureTrue16BitInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureUnalignedDSAccess, FeatureTrue16BitInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureUnpackedD16VMem]>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureUserSGPRInit16Bug,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:    [FeatureUserSGPRInit16Bug])>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureUserSGPRInit16Bug])>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureVALUTransUseHazard,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureVALUTransUseHazard,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureVcmpxExecWARHazard,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureVcmpxPermlaneHazard,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureVcmpxPermlaneHazard,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureVcmpxPermlaneHazard,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureVcmpxPermlaneHazard,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureVcmpxPermlaneHazard,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureVmemPrefInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureVMEMtoScalarWriteHazard,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureVmemWriteVgprInOrder, FeatureCubeInsts, FeatureLerpInst,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  FeatureVmemWriteVgprInOrder, FeatureCubeInsts, FeatureLerpInst,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  FeatureVmemWriteVgprInOrder, FeatureCubeInsts, FeatureLerpInst,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureVmemWriteVgprInOrder, FeatureVMemToLDSLoad, FeatureCubeInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureVMovB64Inst,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureVMovB64Inst,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureVMulU64Inst,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  [FeatureVolcanicIslands,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  [FeatureVolcanicIslands,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureVOP3Literal, FeatureDPP8,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureVOP3Literal, FeatureDPP8,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureVOP3Literal, FeatureDPP8, FeatureExtendedImageInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureVOP3Literal, FeatureDPP8, FeatureExtendedImageInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureVOPDInsts, FeatureMovrel, FeatureFastFMAF32, FeatureDPP, FeatureIntClamp,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureWaitsBeforeSystemScopeStores,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureWaitXcnt,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureWavefrontSize32,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  FeatureWavefrontSize64, FeatureFlatAddressSpace,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureWavefrontSize64, FeatureFlatAddressSpace,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureWavefrontSize64, FeatureFlatAddressSpace,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  FeatureWavefrontSize64, FeatureSMemTimeInst, FeatureMadMacF32Insts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureWMMA128bInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureWMMA128bInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureWMMA256bInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureWMMA256bInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:     FeatureWMMA256bInsts,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:      FeatureXF32Insts
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureXNACK,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:   FeatureXNACKAnyOnly])>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:include "AMDGPUFeatures.td"
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:                                  list<SubtargetFeature> Deps = []> {
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  list<SubtargetFeature> Features = Features_;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:                                     list<SubtargetFeature> Implies> :
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  !listconcat(FeatureISAVersion10_1_Common.Features,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  !listconcat(FeatureISAVersion10_1_Common.Features,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  !listconcat(FeatureISAVersion10_1_Common.Features,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  !listconcat(FeatureISAVersion10_1_Common.Features,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  !listconcat(FeatureISAVersion10_1_Common.Features,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  !listconcat(FeatureISAVersion10_3_0.Features,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  !listconcat(FeatureISAVersion10_Common.Features,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  !listconcat(FeatureISAVersion10_Common.Features,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  !listconcat(FeatureISAVersion11_0_Common.Features,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  !listconcat(FeatureISAVersion11_0_Common.Features,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  !listconcat(FeatureISAVersion11_0_Common.Features,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  !listconcat(FeatureISAVersion11_0_Common.Features,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  !listconcat(FeatureISAVersion11_5_Common.Features,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  !listconcat(FeatureISAVersion11_5_Common.Features,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  !listconcat(FeatureISAVersion11_5_Common.Features,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  !listconcat(FeatureISAVersion11_5_Common.Features,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  !listconcat(FeatureISAVersion11_Common.Features,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  !listconcat(FeatureISAVersion11_Common.Features,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  !listconcat(FeatureISAVersion11_Common.Features,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  !listconcat(FeatureISAVersion11_Common.Features,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  !listconcat(FeatureISAVersion12_50_Common.Features,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  !listconcat(FeatureISAVersion12_50_Common.Features,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  !listconcat(FeatureISAVersion12_50_Common.Features,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  !listconcat(FeatureISAVersion12.Features,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  !listconcat(FeatureISAVersion8_0_Common.Features,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  !listconcat(FeatureISAVersion8_0_Common.Features,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  !listconcat(FeatureISAVersion8_0_Common.Features,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  !listconcat(FeatureISAVersion8_0_Common.Features,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  !listconcat(FeatureISAVersion9_0_Common.Features,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  !listconcat(FeatureISAVersion9_0_Common.Features,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  !listconcat(FeatureISAVersion9_0_Consumer_Common.Features,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  !listconcat(FeatureISAVersion9_0_Consumer_Common.Features,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  !listconcat(FeatureISAVersion9_0_Consumer_Common.Features,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  !listconcat(FeatureISAVersion9_0_Consumer_Common.Features,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  !listconcat(FeatureISAVersion9_0_Consumer_Common.Features,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  !listconcat(FeatureISAVersion9_0_Consumer_Common.Features,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  !listconcat(FeatureISAVersion9_0_Consumer_Common.Features,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  !listconcat(FeatureISAVersion9_0_MI_Common.Features,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  !listconcat(FeatureISAVersion9_0_MI_Common.Features,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  !listconcat(FeatureISAVersion9_4_Common.Features,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  !listconcat(FeatureISAVersion9_4_Common.Features,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  !listconcat(FeatureISAVersion9_4_Common.Features,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:multiclass AMDGPUSubtargetFeature<string FeatureString,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:// Multiclass to define a SubtargetFeature along with optional predicates.
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:                                     string FeatureName,
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  : SubtargetFeature<"atomic-buffer-global-pk-add-f16-no-rtn-insts",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  : SubtargetFeature<"memory-atomic-fadd-f32-denormal-support",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:    : SubtargetFeature<"precise-memory", "EnablePreciseMemory",
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:        SubtargetFeatureGeneration <Value, FeatureName, "GCNSubtarget", Implies>;
+/data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:// Subtarget Features (options and debugging)

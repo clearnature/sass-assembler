@@ -1,0 +1,244 @@
+$ grep 'Feature' -A60 'def FeatureISAVersion12 ' /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td 2>/dev/null | grep 'Feature' | sort > benchmarks/official_gfx1200.txt && grep 'Feature' -A60 'def FeatureISAVersion12 ' /data/ROCm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td 2>/dev/null | grep 'Feature' | sort > benchmarks/fork_gfx1200.txt && diff benchmarks/official_gfx1200.txt benchmarks/fork_gfx1200.txt
+[exit 1]
+1,1189c1,1191
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:                     (all_of FeatureGFX1250Insts, (not FeatureGFX13Insts)))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:// AMDGPU Subtarget Feature (device properties)
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureCIInsts)>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureCIInsts, (not FeatureGFX11Insts))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGCN3Encoding, FeatureDPP)>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGCN3Encoding, FeatureGFX9Insts)>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGCN3Encoding, FeatureGFX9Insts,FeatureSDWA)>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGCN3Encoding, (not FeatureGFX90AInsts))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX10_3Insts, (not FeatureGFX12Insts))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX10_AEncoding)>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX10_BEncoding)>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX10Insts)>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX10Insts,(not FeatureGFX10_3Insts))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX10Insts, (not FeatureGFX11Insts))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX10Insts, (not FeatureGFX12Insts))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX11_7Insts, (not FeatureGFX12Insts))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX11Insts)>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX11Insts, (any_of FeatureGFX13Insts, (not FeatureGFX1250Insts)))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX11Insts, (not FeatureGFX12Insts))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX11Insts, (not FeatureGFX12Insts), (not FeatureGFX11_7Insts))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX11Insts, (not FeatureGFX13Insts))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX1250Insts)>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX1250Insts, (not FeatureGFX13Insts))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX12Insts)>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX12Insts)>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX12Insts)>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX12Insts, (any_of FeatureGFX13Insts, (not FeatureGFX1250Insts)))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX12Insts, (not FeatureGFX1250Insts))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX12Insts, (not FeatureGFX13Insts))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX13Insts)>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX13Insts)>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX7GFX8GFX9Insts)>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX8Insts)>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX8Insts)>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX8Insts, FeatureGCN3Encoding)>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX8Insts, FeatureGCN3Encoding, (not FeatureGFX90AInsts))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX8Insts, FeatureGCN3Encoding, (not FeatureGFX940Insts))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX8Insts, (not FeatureGFX11Insts))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX8Insts, (not FeatureGFX12Insts))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX8Insts, (not FeatureGFX13Insts))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX90AInsts)>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX90AInsts)>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX90AInsts, (not FeatureGFX940Insts))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX940Insts)>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX9Insts)>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX9Insts)>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX9Insts)>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX9Insts, (not FeatureGFX11Insts))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX9Insts, (not FeatureGFX12Insts))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureGFX9Insts, (not FeatureSRAMECC))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureMAIInsts, (not FeatureGFX940Insts))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:                      AssemblerPredicate<(all_of FeatureRequiresAlignedVGPRs)>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureSouthernIslands)>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureTrue16BitInsts, FeatureRealTrue16Insts)>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureTrue16BitInsts, FeatureRealTrue16Insts, (not FeatureD16Writes32BitVgpr))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of FeatureTrue16BitInsts, (not FeatureRealTrue16Insts))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate <(all_of FeatureVolcanicIslands)>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate <(all_of FeatureWavefrontSize32)>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate <(all_of FeatureWavefrontSize64)>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of (not FeatureFP8E5M3Insts))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of (not FeatureGCN3Encoding))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of (not FeatureGCN3Encoding), FeatureCIInsts)>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of (not FeatureGCN3Encoding), FeatureCIInsts, (not FeatureGFX10Insts))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of (not FeatureGCN3Encoding), FeatureCIInsts, (not FeatureGFX11Insts))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of (not FeatureGCN3Encoding), FeatureGFX10Insts, FeatureDPP)>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of (not FeatureGCN3Encoding), FeatureGFX10Insts, FeatureDPP8)>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of (not FeatureGCN3Encoding), FeatureGFX10Insts, FeatureSDWA)>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of (not FeatureGCN3Encoding), (not FeatureGFX10Insts))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of (not FeatureGCN3Encoding), (not FeatureGFX11Insts))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of (not FeatureGFX10Insts))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of (not FeatureGFX10Insts), (not FeatureGFX90AInsts))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of (not FeatureGFX11Insts))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of (not FeatureGFX1250Insts))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of (not FeatureGFX12Insts))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of (not FeatureGFX90AInsts))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of (not FeatureGFX940Insts))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of (not FeatureGFX9Insts), FeatureSDWA)>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of (not FeatureMAIInsts))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of (not FeatureNoSdstCMPX))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:                      AssemblerPredicate<(all_of (not FeatureRequiresAlignedVGPRs))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of (not FeatureRestrictedSOffset))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of (not FeatureSALUFloatInsts))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of (not FeatureTrue16BitInsts))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(all_of (not FeatureUnpackedD16VMem))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:          AssemblerPredicate<(any_of !cast<SubtargetFeature>("Feature"#NAME))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(any_of FeatureAtomicBufferGlobalPkAddF16NoRtnInsts, FeatureAtomicBufferGlobalPkAddF16Insts)>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(any_of FeatureDot1Insts, FeatureDot8Insts)>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(any_of FeatureGFX10_3Insts)>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(any_of FeatureGFX10_3Insts, FeatureGFX940Insts)>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(any_of FeatureGFX10Insts, FeatureGFX940Insts)>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(any_of FeatureGFX1250Insts)>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(any_of FeatureGFX1250Insts)>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(any_of FeatureGFX1250Insts)>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(any_of FeatureGFX1250Insts)>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(any_of FeatureGFX13Insts, (all_of FeatureGFX11Insts, (not FeatureGFX1250Insts)))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(any_of FeatureGFX13Insts, (all_of (not FeatureGFX90AInsts), (not FeatureGFX1250Insts)))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(any_of FeatureGFX90AInsts, FeatureGFX1250Insts)>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(any_of FeatureGFX940Insts,
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(any_of FeatureGFX940Insts, FeatureGFX11Insts)>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td://                      AssemblerPredicate<(any_of FeatureMadMixInsts)>
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate <(any_of FeatureWavefrontSize32,
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate <(any_of FeatureWavefrontSize64,
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  AssemblerPredicate<(not (all_of FeatureTrue16BitInsts, FeatureRealTrue16Insts))>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:class FeatureMaxHardClauseLength<int size> : SubtargetFeature<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:class FeatureMaxPrivateElementSize<int size> : SubtargetFeature<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:class FeatureSet<list<SubtargetFeature> Features_> {
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:class GCNSubtargetFeatureGeneration <string Value,
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:class SubtargetFeatureInstCacheLineSize <int Value> : SubtargetFeature <
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:class SubtargetFeatureLDSBankCount <int Value> : SubtargetFeature <
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureAtomicBufferGlobalPkAddF16NoRtnInsts
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureCuMode : SubtargetFeature<"cumode",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureDPP8 : SubtargetFeature<"dpp8",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureDPP : SubtargetFeature<"dpp",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureDumpCodeLower : SubtargetFeature <"dumpcode",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureEnableDS128 : SubtargetFeature<"enable-ds128",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureEnableFlatScratch : SubtargetFeature<"enable-flat-scratch",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureEnableLoadStoreOpt : SubtargetFeature <"load-store-opt",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureEnablePRTStrictNull : SubtargetFeature<"enable-prt-strict-null",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureEnableSIScheduler : SubtargetFeature<"si-scheduler",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureEnableUnsafeDSOffsetFolding : SubtargetFeature <
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureGFX10 : GCNSubtargetFeatureGeneration<"GFX10",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureGFX11 : GCNSubtargetFeatureGeneration<"GFX11",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureGFX12 : GCNSubtargetFeatureGeneration<"GFX12",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureGFX13 : GCNSubtargetFeatureGeneration<"GFX13",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureGFX9 : GCNSubtargetFeatureGeneration<"GFX9",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureInstCacheLineSize128 : SubtargetFeatureInstCacheLineSize<128>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureInstCacheLineSize64  : SubtargetFeatureInstCacheLineSize<64>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion10_1_0 : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion10_1_1 : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion10_1_2 : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion10_1_3 : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion10_1_Common : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion10_1_Generic : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion10_3_0 : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion10_3_Generic: FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion10_Common : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion11_0_0 : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion11_0_1 : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion11_0_2 : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion11_0_3 : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion11_0_Common : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion11_5_0 : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion11_5_1 : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion11_5_2 : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion11_5_3 : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion11_5_Common : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion11_7_Common : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion11_Common : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion11_Generic: FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion12_50_Common : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion12_50 : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion12_51 : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion12_5_Generic: FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion12 : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion12_Generic: FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion13 : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion6_0_0 : FeatureSet<[FeatureSouthernIslands,
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion6_0_1 : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion6_0_2 : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion7_0_0 : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion7_0_1 : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion7_0_2 : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion7_0_3 : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion7_0_4 : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion7_0_5 : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion8_0_1 : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion8_0_2 : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion8_0_3 : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion8_0_5 : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion8_0_Common : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion8_1_0 : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion9_0_0 : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion9_0_2 : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion9_0_4 : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion9_0_6 : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion9_0_8 : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion9_0_9 : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion9_0_A : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion9_0_C : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion9_0_Common : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion9_0_Consumer_Common : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion9_0_MI_Common : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion9_4_2 : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion9_4_Common : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion9_4_Generic : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion9_5_0 : FeatureSet<FeatureISAVersion9_5_Common.Features>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion9_5_Common : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureISAVersion9_Generic : FeatureSet<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureLDSBankCount16 : SubtargetFeatureLDSBankCount<16>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureLDSBankCount32 : SubtargetFeatureLDSBankCount<32>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureMaxHardClauseLength32 : FeatureMaxHardClauseLength<32>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureMaxHardClauseLength63 : FeatureMaxHardClauseLength<63>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureMaxPrivateElementSize16 : FeatureMaxPrivateElementSize<16>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureMaxPrivateElementSize4 : FeatureMaxPrivateElementSize<4>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureMaxPrivateElementSize8 : FeatureMaxPrivateElementSize<8>;
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureMemoryAtomicFAddF32DenormalSupport
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:  def Feature#NAME : SubtargetFeature<FeatureString,
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeaturePreciseMemory
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureRealTrue16Insts : SubtargetFeature<"real-true16",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureRequiresAlignedVGPRs : SubtargetFeature<"vgpr-align2",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureRequiresCOV6 : SubtargetFeature<"requires-cov6",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureSeaIslands : GCNSubtargetFeatureGeneration<"SEA_ISLANDS",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureSouthernIslands : GCNSubtargetFeatureGeneration<"SOUTHERN_ISLANDS",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureSRAMECC : SubtargetFeature<"sramecc",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureSupportsSRAMECC : SubtargetFeature<"sramecc-support",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureSupportsXNACK : SubtargetFeature<"xnack-support",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureTgSplit : SubtargetFeature<"tgsplit",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureUseAddPC64Inst : SubtargetFeature<"use-add-pc64-inst",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureUseBlockVGPROpsForCSR : SubtargetFeature<"block-vgpr-csr",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureUseFlatForGlobal : SubtargetFeature<"flat-for-global",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureVolcanicIslands : GCNSubtargetFeatureGeneration<"VOLCANIC_ISLANDS",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureWaitsBeforeSystemScopeStores : SubtargetFeature<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:def FeatureXNACK : SubtargetFeature<"xnack",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm 1024AddressableVGPRs : AMDGPUSubtargetFeature<"1024-addressable-vgprs",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm 1536VGPRs : AMDGPUSubtargetFeature<"1536-physical-vgprs",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm 16BitInsts : AMDGPUSubtargetFeature<"16-bit-insts",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm 45BitNumRecordsBufferResource : AMDGPUSubtargetFeature<"45-bit-num-records-buffer-resource",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm 64BitLiterals : AMDGPUSubtargetFeature<"64-bit-literals",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm A16 : AMDGPUSubtargetFeature<"a16",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm AddMinMaxInsts : AMDGPUSubtargetFeature<"add-min-max-insts",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm AddNoCarryInsts : AMDGPUSubtargetFeature<"add-no-carry-insts",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm AddSubU64Insts : AMDGPUSubtargetFeature<"add-sub-u64-insts",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm AgentScopeFineGrainedRemoteMemoryAtomics : AMDGPUSubtargetFeature<
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm ApertureRegs : AMDGPUSubtargetFeature<"aperture-regs",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm ArchitectedFlatScratch : AMDGPUSubtargetFeature<"architected-flat-scratch",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm ArchitectedSGPRs : AMDGPUSubtargetFeature<"architected-sgprs",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm AshrPkInsts : AMDGPUSubtargetFeature<"ashr-pk-insts",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm AssemblerPermissiveWavesize : AMDGPUSubtargetFeature<"assembler-permissive-wavesize",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm Asynccnt : AMDGPUSubtargetFeature<"asynccnt",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm AtomicBufferGlobalPkAddF16Insts : AMDGPUSubtargetFeature<"atomic-buffer-global-pk-add-f16-insts",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm AtomicBufferPkAddBF16Inst : AMDGPUSubtargetFeature<"atomic-buffer-pk-add-bf16-inst",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm AtomicCSubNoRtnInsts : AMDGPUSubtargetFeature<"atomic-csub-no-rtn-insts",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm AtomicDsPkAdd16Insts : AMDGPUSubtargetFeature<"atomic-ds-pk-add-16-insts",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm AtomicFaddNoRtnInsts : AMDGPUSubtargetFeature<"atomic-fadd-no-rtn-insts",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm AtomicFaddRtnInsts : AMDGPUSubtargetFeature<"atomic-fadd-rtn-insts",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm AtomicFlatPkAdd16Insts : AMDGPUSubtargetFeature<"atomic-flat-pk-add-16-insts",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm AtomicFMinFMaxF32FlatInsts : AMDGPUSubtargetFeature<"atomic-fmin-fmax-flat-f32",
+< /data/work/compiler/llvm/llvm-project/llvm/lib/Target/AMDGPU/AMDGPU.td:defm AtomicFMinFMaxF32GlobalInsts : AMDGPUSubtargetFeature<"atomic-fmin-fmax-global-f32",
+< /d
+
+[… truncated 224000 chars …]

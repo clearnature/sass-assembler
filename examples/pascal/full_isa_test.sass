@@ -1,0 +1,74 @@
+; HunTian SASS — 全指令集测试
+.func full_isa_test
+
+    ; ─── 整数算术 ───
+    iadd R0, R1, R2
+    iadd3 R3, R4, R5, R6
+    iscad R7, R8, R9, 4
+    isub R10, R11, R12
+    imad R13, R14, R15, R16
+    imul R17, R18, R19
+    imnmx R20, R21, R22
+
+    ; ─── 位操作 ───
+    shl R23, R24, 5
+    shr R25, R26, 3
+    bfe R27, R28, 8, 16
+    bfi R29, R30, R31, R1
+    lop3 R2, R3, R4, 0xFE
+    brev R5, R6
+
+    ; ─── 浮点 ───
+    fadd R7, R8, R9
+    fmul R10, R11, R12
+    fset R13, R14, R15, R16
+    fsel R17, R18, R19, R20
+    frcp R21, R22
+    fsqrt R23, R24
+
+    ; ─── XMAD + FFMA ───
+    ffma R0, R1, R2, R3
+    xmad R4, R5, R6, R7
+    xmad.mrg R8, R9, R10, R11
+    xmad.psl R12, R13, R14, R15
+
+    ; ─── 内存 ───
+    ldg R0, [R8 + 0]
+    lds R1, [R9 + 4]
+    stg [R10 + 0], R2
+    sts [R11 + 4], R3
+    ldc R4, [R12 + 8]
+
+    ; ─── 控制流 ───
+    bra next_section
+    cal sub_func
+    ret
+    kill
+    yield
+
+next_section:
+
+    ; ─── 数据移动 ───
+    mov R0, R1
+    mov32i R2, 0x42
+    sel R3, R4, R5, R6
+    s2r R7, SR_TID_X
+
+    ; ─── HunTian VAVX3 ───
+    vavx3.add V0, V1, V2
+    vavx3.mul V3, V4, V5
+    vavx3.mad V6, V7, V8, V9
+    vavx3.mma V10, V11, V12, V13
+    vavx3.geom V14, V15
+    vavx3.shuffle V16, V17, V18
+    vavx3.braid V19, V20
+    vavx3.laplacian V21, V22, V23, V24, V25
+
+    ; ─── 三进制 ───
+    tmad t0, t1, t2, t3
+    tmul t4, t5, t6
+    tconv R0, t7
+
+    exit
+
+.endfunc

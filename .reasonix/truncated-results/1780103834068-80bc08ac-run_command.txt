@@ -1,0 +1,527 @@
+$ ctest --test-dir build 2>&1
+[exit 8]
+Test project /data/rtl-sdr/sass-assembler/build
+      Start  1: LexerTests
+Could not find executable /data/rtl-sdr/sass-assembler/build/test_lexer
+Looked in the following places:
+/data/rtl-sdr/sass-assembler/build/test_lexer
+/data/rtl-sdr/sass-assembler/build/test_lexer
+/data/rtl-sdr/sass-assembler/build/Release/test_lexer
+/data/rtl-sdr/sass-assembler/build/Release/test_lexer
+/data/rtl-sdr/sass-assembler/build/Debug/test_lexer
+/data/rtl-sdr/sass-assembler/build/Debug/test_lexer
+/data/rtl-sdr/sass-assembler/build/MinSizeRel/test_lexer
+/data/rtl-sdr/sass-assembler/build/MinSizeRel/test_lexer
+/data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_lexer
+/data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_lexer
+/data/rtl-sdr/sass-assembler/build/Deployment/test_lexer
+/data/rtl-sdr/sass-assembler/build/Deployment/test_lexer
+/data/rtl-sdr/sass-assembler/build/Development/test_lexer
+/data/rtl-sdr/sass-assembler/build/Development/test_lexer
+data/rtl-sdr/sass-assembler/build/test_lexer
+data/rtl-sdr/sass-assembler/build/test_lexer
+data/rtl-sdr/sass-assembler/build/Release/test_lexer
+data/rtl-sdr/sass-assembler/build/Release/test_lexer
+data/rtl-sdr/sass-assembler/build/Debug/test_lexer
+data/rtl-sdr/sass-assembler/build/Debug/test_lexer
+data/rtl-sdr/sass-assembler/build/MinSizeRel/test_lexer
+data/rtl-sdr/sass-assembler/build/MinSizeRel/test_lexer
+data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_lexer
+data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_lexer
+data/rtl-sdr/sass-assembler/build/Deployment/test_lexer
+data/rtl-sdr/sass-assembler/build/Deployment/test_lexer
+data/rtl-sdr/sass-assembler/build/Development/test_lexer
+data/rtl-sdr/sass-assembler/build/Development/test_lexer
+ 1/21 Test  #1: LexerTests .......................***Not Run   0.00 sec
+      Start  2: ParserTests
+Could not find executable /data/rtl-sdr/sass-assembler/build/test_parser
+Looked in the following places:
+/data/rtl-sdr/sass-assembler/build/test_parser
+/data/rtl-sdr/sass-assembler/build/test_parser
+/data/rtl-sdr/sass-assembler/build/Release/test_parser
+/data/rtl-sdr/sass-assembler/build/Release/test_parser
+/data/rtl-sdr/sass-assembler/build/Debug/test_parser
+/data/rtl-sdr/sass-assembler/build/Debug/test_parser
+/data/rtl-sdr/sass-assembler/build/MinSizeRel/test_parser
+/data/rtl-sdr/sass-assembler/build/MinSizeRel/test_parser
+/data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_parser
+/data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_parser
+/data/rtl-sdr/sass-assembler/build/Deployment/test_parser
+/data/rtl-sdr/sass-assembler/build/Deployment/test_parser
+/data/rtl-sdr/sass-assembler/build/Development/test_parser
+/data/rtl-sdr/sass-assembler/build/Development/test_parser
+data/rtl-sdr/sass-assembler/build/test_parser
+data/rtl-sdr/sass-assembler/build/test_parser
+data/rtl-sdr/sass-assembler/build/Release/test_parser
+data/rtl-sdr/sass-assembler/build/Release/test_parser
+data/rtl-sdr/sass-assembler/build/Debug/test_parser
+data/rtl-sdr/sass-assembler/build/Debug/test_parser
+data/rtl-sdr/sass-assembler/build/MinSizeRel/test_parser
+data/rtl-sdr/sass-assembler/build/MinSizeRel/test_parser
+data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_parser
+data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_parser
+data/rtl-sdr/sass-assembler/build/Deployment/test_parser
+data/rtl-sdr/sass-assembler/build/Deployment/test_parser
+data/rtl-sdr/sass-assembler/build/Development/test_parser
+data/rtl-sdr/sass-assembler/build/Development/test_parser
+ 2/21 Test  #2: ParserTests ......................***Not Run   0.00 sec
+      Start  3: OperandCodecTests
+Could not find executable /data/rtl-sdr/sass-assembler/build/test_operand_codec
+Looked in the following places:
+/data/rtl-sdr/sass-assembler/build/test_operand_codec
+/data/rtl-sdr/sass-assembler/build/test_operand_codec
+/data/rtl-sdr/sass-assembler/build/Release/test_operand_codec
+/data/rtl-sdr/sass-assembler/build/Release/test_operand_codec
+/data/rtl-sdr/sass-assembler/build/Debug/test_operand_codec
+/data/rtl-sdr/sass-assembler/build/Debug/test_operand_codec
+/data/rtl-sdr/sass-assembler/build/MinSizeRel/test_operand_codec
+/data/rtl-sdr/sass-assembler/build/MinSizeRel/test_operand_codec
+/data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_operand_codec
+/data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_operand_codec
+/data/rtl-sdr/sass-assembler/build/Deployment/test_operand_codec
+/data/rtl-sdr/sass-assembler/build/Deployment/test_operand_codec
+/data/rtl-sdr/sass-assembler/build/Development/test_operand_codec
+/data/rtl-sdr/sass-assembler/build/Development/test_operand_codec
+data/rtl-sdr/sass-assembler/build/test_operand_codec
+data/rtl-sdr/sass-assembler/build/test_operand_codec
+data/rtl-sdr/sass-assembler/build/Release/test_operand_codec
+data/rtl-sdr/sass-assembler/build/Release/test_operand_codec
+data/rtl-sdr/sass-assembler/build/Debug/test_operand_codec
+data/rtl-sdr/sass-assembler/build/Debug/test_operand_codec
+data/rtl-sdr/sass-assembler/build/MinSizeRel/test_operand_codec
+data/rtl-sdr/sass-assembler/build/MinSizeRel/test_operand_codec
+data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_operand_codec
+data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_operand_codec
+data/rtl-sdr/sass-assembler/build/Deployment/test_operand_codec
+data/rtl-sdr/sass-assembler/build/Deployment/test_operand_codec
+data/rtl-sdr/sass-assembler/build/Development/test_operand_codec
+data/rtl-sdr/sass-assembler/build/Development/test_operand_codec
+ 3/21 Test  #3: OperandCodecTests ................***Not Run   0.00 sec
+      Start  4: OpcodeTableTests
+Could not find executable /data/rtl-sdr/sass-assembler/build/test_opcode_table
+Looked in the following places:
+/data/rtl-sdr/sass-assembler/build/test_opcode_table
+/data/rtl-sdr/sass-assembler/build/test_opcode_table
+/data/rtl-sdr/sass-assembler/build/Release/test_opcode_table
+/data/rtl-sdr/sass-assembler/build/Release/test_opcode_table
+/data/rtl-sdr/sass-assembler/build/Debug/test_opcode_table
+/data/rtl-sdr/sass-assembler/build/Debug/test_opcode_table
+/data/rtl-sdr/sass-assembler/build/MinSizeRel/test_opcode_table
+/data/rtl-sdr/sass-assembler/build/MinSizeRel/test_opcode_table
+/data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_opcode_table
+/data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_opcode_table
+/data/rtl-sdr/sass-assembler/build/Deployment/test_opcode_table
+/data/rtl-sdr/sass-assembler/build/Deployment/test_opcode_table
+/data/rtl-sdr/sass-assembler/build/Development/test_opcode_table
+/data/rtl-sdr/sass-assembler/build/Development/test_opcode_table
+data/rtl-sdr/sass-assembler/build/test_opcode_table
+data/rtl-sdr/sass-assembler/build/test_opcode_table
+data/rtl-sdr/sass-assembler/build/Release/test_opcode_table
+data/rtl-sdr/sass-assembler/build/Release/test_opcode_table
+data/rtl-sdr/sass-assembler/build/Debug/test_opcode_table
+data/rtl-sdr/sass-assembler/build/Debug/test_opcode_table
+data/rtl-sdr/sass-assembler/build/MinSizeRel/test_opcode_table
+data/rtl-sdr/sass-assembler/build/MinSizeRel/test_opcode_table
+data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_opcode_table
+data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_opcode_table
+data/rtl-sdr/sass-assembler/build/Deployment/test_opcode_table
+data/rtl-sdr/sass-assembler/build/Deployment/test_opcode_table
+data/rtl-sdr/sass-assembler/build/Development/test_opcode_table
+data/rtl-sdr/sass-assembler/build/Development/test_opcode_table
+ 4/21 Test  #4: OpcodeTableTests .................***Not Run   0.00 sec
+      Start  5: ReuseDetectorTests
+Could not find executable /data/rtl-sdr/sass-assembler/build/test_reuse_detector
+Looked in the following places:
+/data/rtl-sdr/sass-assembler/build/test_reuse_detector
+/data/rtl-sdr/sass-assembler/build/test_reuse_detector
+/data/rtl-sdr/sass-assembler/build/Release/test_reuse_detector
+/data/rtl-sdr/sass-assembler/build/Release/test_reuse_detector
+/data/rtl-sdr/sass-assembler/build/Debug/test_reuse_detector
+/data/rtl-sdr/sass-assembler/build/Debug/test_reuse_detector
+/data/rtl-sdr/sass-assembler/build/MinSizeRel/test_reuse_detector
+/data/rtl-sdr/sass-assembler/build/MinSizeRel/test_reuse_detector
+/data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_reuse_detector
+/data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_reuse_detector
+/data/rtl-sdr/sass-assembler/build/Deployment/test_reuse_detector
+/data/rtl-sdr/sass-assembler/build/Deployment/test_reuse_detector
+/data/rtl-sdr/sass-assembler/build/Development/test_reuse_detector
+/data/rtl-sdr/sass-assembler/build/Development/test_reuse_detector
+data/rtl-sdr/sass-assembler/build/test_reuse_detector
+data/rtl-sdr/sass-assembler/build/test_reuse_detector
+data/rtl-sdr/sass-assembler/build/Release/test_reuse_detector
+data/rtl-sdr/sass-assembler/build/Release/test_reuse_detector
+data/rtl-sdr/sass-assembler/build/Debug/test_reuse_detector
+data/rtl-sdr/sass-assembler/build/Debug/test_reuse_detector
+data/rtl-sdr/sass-assembler/build/MinSizeRel/test_reuse_detector
+data/rtl-sdr/sass-assembler/build/MinSizeRel/test_reuse_detector
+data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_reuse_detector
+data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_reuse_detector
+data/rtl-sdr/sass-assembler/build/Deployment/test_reuse_detector
+data/rtl-sdr/sass-assembler/build/Deployment/test_reuse_detector
+data/rtl-sdr/sass-assembler/build/Development/test_reuse_detector
+data/rtl-sdr/sass-assembler/build/Development/test_reuse_detector
+ 5/21 Test  #5: ReuseDetectorTests ...............***Not Run   0.00 sec
+      Start  6: ManifoldSchedulerTests
+Could not find executable /data/rtl-sdr/sass-assembler/build/test_manifold_scheduler
+Looked in the following places:
+/data/rtl-sdr/sass-assembler/build/test_manifold_scheduler
+/data/rtl-sdr/sass-assembler/build/test_manifold_scheduler
+/data/rtl-sdr/sass-assembler/build/Release/test_manifold_scheduler
+/data/rtl-sdr/sass-assembler/build/Release/test_manifold_scheduler
+/data/rtl-sdr/sass-assembler/build/Debug/test_manifold_scheduler
+/data/rtl-sdr/sass-assembler/build/Debug/test_manifold_scheduler
+/data/rtl-sdr/sass-assembler/build/MinSizeRel/test_manifold_scheduler
+/data/rtl-sdr/sass-assembler/build/MinSizeRel/test_manifold_scheduler
+/data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_manifold_scheduler
+/data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_manifold_scheduler
+/data/rtl-sdr/sass-assembler/build/Deployment/test_manifold_scheduler
+/data/rtl-sdr/sass-assembler/build/Deployment/test_manifold_scheduler
+/data/rtl-sdr/sass-assembler/build/Development/test_manifold_scheduler
+/data/rtl-sdr/sass-assembler/build/Development/test_manifold_scheduler
+data/rtl-sdr/sass-assembler/build/test_manifold_scheduler
+data/rtl-sdr/sass-assembler/build/test_manifold_scheduler
+data/rtl-sdr/sass-assembler/build/Release/test_manifold_scheduler
+data/rtl-sdr/sass-assembler/build/Release/test_manifold_scheduler
+data/rtl-sdr/sass-assembler/build/Debug/test_manifold_scheduler
+data/rtl-sdr/sass-assembler/build/Debug/test_manifold_scheduler
+data/rtl-sdr/sass-assembler/build/MinSizeRel/test_manifold_scheduler
+data/rtl-sdr/sass-assembler/build/MinSizeRel/test_manifold_scheduler
+data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_manifold_scheduler
+data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_manifold_scheduler
+data/rtl-sdr/sass-assembler/build/Deployment/test_manifold_scheduler
+data/rtl-sdr/sass-assembler/build/Deployment/test_manifold_scheduler
+data/rtl-sdr/sass-assembler/build/Development/test_manifold_scheduler
+data/rtl-sdr/sass-assembler/build/Development/test_manifold_scheduler
+ 6/21 Test  #6: ManifoldSchedulerTests ...........***Not Run   0.00 sec
+      Start  7: BlockEncoderTests
+Could not find executable /data/rtl-sdr/sass-assembler/build/test_block_encoder
+Looked in the following places:
+/data/rtl-sdr/sass-assembler/build/test_block_encoder
+/data/rtl-sdr/sass-assembler/build/test_block_encoder
+/data/rtl-sdr/sass-assembler/build/Release/test_block_encoder
+/data/rtl-sdr/sass-assembler/build/Release/test_block_encoder
+/data/rtl-sdr/sass-assembler/build/Debug/test_block_encoder
+/data/rtl-sdr/sass-assembler/build/Debug/test_block_encoder
+/data/rtl-sdr/sass-assembler/build/MinSizeRel/test_block_encoder
+/data/rtl-sdr/sass-assembler/build/MinSizeRel/test_block_encoder
+/data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_block_encoder
+/data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_block_encoder
+/data/rtl-sdr/sass-assembler/build/Deployment/test_block_encoder
+/data/rtl-sdr/sass-assembler/build/Deployment/test_block_encoder
+/data/rtl-sdr/sass-assembler/build/Development/test_block_encoder
+/data/rtl-sdr/sass-assembler/build/Development/test_block_encoder
+data/rtl-sdr/sass-assembler/build/test_block_encoder
+data/rtl-sdr/sass-assembler/build/test_block_encoder
+data/rtl-sdr/sass-assembler/build/Release/test_block_encoder
+data/rtl-sdr/sass-assembler/build/Release/test_block_encoder
+data/rtl-sdr/sass-assembler/build/Debug/test_block_encoder
+data/rtl-sdr/sass-assembler/build/Debug/test_block_encoder
+data/rtl-sdr/sass-assembler/build/MinSizeRel/test_block_encoder
+data/rtl-sdr/sass-assembler/build/MinSizeRel/test_block_encoder
+data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_block_encoder
+data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_block_encoder
+data/rtl-sdr/sass-assembler/build/Deployment/test_block_encoder
+data/rtl-sdr/sass-assembler/build/Deployment/test_block_encoder
+data/rtl-sdr/sass-assembler/build/Development/test_block_encoder
+data/rtl-sdr/sass-assembler/build/Development/test_block_encoder
+ 7/21 Test  #7: BlockEncoderTests ................***Not Run   0.00 sec
+      Start  8: AssemblerTests
+Could not find executable /data/rtl-sdr/sass-assembler/build/test_assembler
+Looked in the following places:
+/data/rtl-sdr/sass-assembler/build/test_assembler
+/data/rtl-sdr/sass-assembler/build/test_assembler
+/data/rtl-sdr/sass-assembler/build/Release/test_assembler
+/data/rtl-sdr/sass-assembler/build/Release/test_assembler
+/data/rtl-sdr/sass-assembler/build/Debug/test_assembler
+/data/rtl-sdr/sass-assembler/build/Debug/test_assembler
+/data/rtl-sdr/sass-assembler/build/MinSizeRel/test_assembler
+/data/rtl-sdr/sass-assembler/build/MinSizeRel/test_assembler
+/data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_assembler
+/data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_assembler
+/data/rtl-sdr/sass-assembler/build/Deployment/test_assembler
+/data/rtl-sdr/sass-assembler/build/Deployment/test_assembler
+/data/rtl-sdr/sass-assembler/build/Development/test_assembler
+/data/rtl-sdr/sass-assembler/build/Development/test_assembler
+data/rtl-sdr/sass-assembler/build/test_assembler
+data/rtl-sdr/sass-assembler/build/test_assembler
+data/rtl-sdr/sass-assembler/build/Release/test_assembler
+data/rtl-sdr/sass-assembler/build/Release/test_assembler
+data/rtl-sdr/sass-assembler/build/Debug/test_assembler
+data/rtl-sdr/sass-assembler/build/Debug/test_assembler
+data/rtl-sdr/sass-assembler/build/MinSizeRel/test_assembler
+data/rtl-sdr/sass-assembler/build/MinSizeRel/test_assembler
+data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_assembler
+data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_assembler
+data/rtl-sdr/sass-assembler/build/Deployment/test_assembler
+data/rtl-sdr/sass-assembler/build/Deployment/test_assembler
+data/rtl-sdr/sass-assembler/build/Development/test_assembler
+data/rtl-sdr/sass-assembler/build/Development/test_assembler
+ 8/21 Test  #8: AssemblerTests ...................***Not Run   0.00 sec
+      Start  9: PascalBackendTests
+Could not find executable /data/rtl-sdr/sass-assembler/build/test_pascal_backend
+Looked in the following places:
+/data/rtl-sdr/sass-assembler/build/test_pascal_backend
+/data/rtl-sdr/sass-assembler/build/test_pascal_backend
+/data/rtl-sdr/sass-assembler/build/Release/test_pascal_backend
+/data/rtl-sdr/sass-assembler/build/Release/test_pascal_backend
+/data/rtl-sdr/sass-assembler/build/Debug/test_pascal_backend
+/data/rtl-sdr/sass-assembler/build/Debug/test_pascal_backend
+/data/rtl-sdr/sass-assembler/build/MinSizeRel/test_pascal_backend
+/data/rtl-sdr/sass-assembler/build/MinSizeRel/test_pascal_backend
+/data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_pascal_backend
+/data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_pascal_backend
+/data/rtl-sdr/sass-assembler/build/Deployment/test_pascal_backend
+/data/rtl-sdr/sass-assembler/build/Deployment/test_pascal_backend
+/data/rtl-sdr/sass-assembler/build/Development/test_pascal_backend
+/data/rtl-sdr/sass-assembler/build/Development/test_pascal_backend
+data/rtl-sdr/sass-assembler/build/test_pascal_backend
+data/rtl-sdr/sass-assembler/build/test_pascal_backend
+data/rtl-sdr/sass-assembler/build/Release/test_pascal_backend
+data/rtl-sdr/sass-assembler/build/Release/test_pascal_backend
+data/rtl-sdr/sass-assembler/build/Debug/test_pascal_backend
+data/rtl-sdr/sass-assembler/build/Debug/test_pascal_backend
+Unable to find executable: /data/rtl-sdr/sass-assembler/build/test_lexer
+Unable to find executable: /data/rtl-sdr/sass-assembler/build/test_parser
+Unable to find executable: /data/rtl-sdr/sass-assembler/build/test_operand_codec
+Unable to find executable: /data/rtl-sdr/sass-assembler/build/test_opcode_table
+Unable to find executable: /data/rtl-sdr/sass-assembler/build/test_reuse_detector
+Unable to find executable: /data/rtl-sdr/sass-assembler/build/test_manifold_scheduler
+Unable to find executable: /data/rtl-sdr/sass-assembler/build/test_block_encoder
+Unable to find executable: /data/rtl-sdr/sass-assembler/build/test_assembler
+Unable to find executable: /data/rtl-sdr/sass-assembler/build/test_pascal_backend
+data/rtl-sdr/sass-assembler/build/MinSizeRel/test_pascal_backend
+data/rtl-sdr/sass-assembler/build/MinSizeRel/test_pascal_backend
+data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_pascal_backend
+data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_pascal_backend
+data/rtl-sdr/sass-assembler/build/Deployment/test_pascal_backend
+data/rtl-sdr/sass-assembler/build/Deployment/test_pascal_backend
+data/rtl-sdr/sass-assembler/build/Development/test_pascal_backend
+data/rtl-sdr/sass-assembler/build/Development/test_pascal_backend
+ 9/21 Test  #9: PascalBackendTests ...............***Not Run   0.00 sec
+      Start 10: DisassemblerTests
+Could not find executable /data/rtl-sdr/sass-assembler/build/test_disassembler
+Looked in the following places:
+/data/rtl-sdr/sass-assembler/build/test_disassembler
+/data/rtl-sdr/sass-assembler/build/test_disassembler
+/data/rtl-sdr/sass-assembler/build/Release/test_disassembler
+/data/rtl-sdr/sass-assembler/build/Release/test_disassembler
+/data/rtl-sdr/sass-assembler/build/Debug/test_disassembler
+/data/rtl-sdr/sass-assembler/build/Debug/test_disassembler
+/data/rtl-sdr/sass-assembler/build/MinSizeRel/test_disassembler
+/data/rtl-sdr/sass-assembler/build/MinSizeRel/test_disassembler
+/data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_disassembler
+/data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_disassembler
+/data/rtl-sdr/sass-assembler/build/Deployment/test_disassembler
+/data/rtl-sdr/sass-assembler/build/Deployment/test_disassembler
+/data/rtl-sdr/sass-assembler/build/Development/test_disassembler
+/data/rtl-sdr/sass-assembler/build/Development/test_disassembler
+data/rtl-sdr/sass-assembler/build/test_disassembler
+data/rtl-sdr/sass-assembler/build/test_disassembler
+data/rtl-sdr/sass-assembler/build/Release/test_disassembler
+data/rtl-sdr/sass-assembler/build/Release/test_disassembler
+data/rtl-sdr/sass-assembler/build/Debug/test_disassembler
+data/rtl-sdr/sass-assembler/build/Debug/test_disassembler
+data/rtl-sdr/sass-assembler/build/MinSizeRel/test_disassembler
+data/rtl-sdr/sass-assembler/build/MinSizeRel/test_disassembler
+data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_disassembler
+data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_disassembler
+data/rtl-sdr/sass-assembler/build/Deployment/test_disassembler
+data/rtl-sdr/sass-assembler/build/Deployment/test_disassembler
+data/rtl-sdr/sass-assembler/build/Development/test_disassembler
+data/rtl-sdr/sass-assembler/build/Development/test_disassembler
+10/21 Test #10: DisassemblerTests ................***Not Run   0.00 sec
+      Start 11: SimdKernelTests
+Could not find executable /data/rtl-sdr/sass-assembler/build/test_simd_kernels
+Looked in the following places:
+/data/rtl-sdr/sass-assembler/build/test_simd_kernels
+/data/rtl-sdr/sass-assembler/build/test_simd_kernels
+/data/rtl-sdr/sass-assembler/build/Release/test_simd_kernels
+/data/rtl-sdr/sass-assembler/build/Release/test_simd_kernels
+/data/rtl-sdr/sass-assembler/build/Debug/test_simd_kernels
+/data/rtl-sdr/sass-assembler/build/Debug/test_simd_kernels
+/data/rtl-sdr/sass-assembler/build/MinSizeRel/test_simd_kernels
+/data/rtl-sdr/sass-assembler/build/MinSizeRel/test_simd_kernels
+/data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_simd_kernels
+/data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_simd_kernels
+/data/rtl-sdr/sass-assembler/build/Deployment/test_simd_kernels
+/data/rtl-sdr/sass-assembler/build/Deployment/test_simd_kernels
+/data/rtl-sdr/sass-assembler/build/Development/test_simd_kernels
+/data/rtl-sdr/sass-assembler/build/Development/test_simd_kernels
+data/rtl-sdr/sass-assembler/build/test_simd_kernels
+data/rtl-sdr/sass-assembler/build/test_simd_kernels
+data/rtl-sdr/sass-assembler/build/Release/test_simd_kernels
+data/rtl-sdr/sass-assembler/build/Release/test_simd_kernels
+data/rtl-sdr/sass-assembler/build/Debug/test_simd_kernels
+data/rtl-sdr/sass-assembler/build/Debug/test_simd_kernels
+data/rtl-sdr/sass-assembler/build/MinSizeRel/test_simd_kernels
+data/rtl-sdr/sass-assembler/build/MinSizeRel/test_simd_kernels
+data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_simd_kernels
+data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_simd_kernels
+data/rtl-sdr/sass-assembler/build/Deployment/test_simd_kernels
+data/rtl-sdr/sass-assembler/build/Deployment/test_simd_kernels
+data/rtl-sdr/sass-assembler/build/Development/test_simd_kernels
+data/rtl-sdr/sass-assembler/build/Development/test_simd_kernels
+11/21 Test #11: SimdKernelTests ..................***Not Run   0.00 sec
+      Start 12: HuntianIntegrationTests
+Could not find executable /data/rtl-sdr/sass-assembler/build/test_huntian_integration
+Looked in the following places:
+/data/rtl-sdr/sass-assembler/build/test_huntian_integration
+/data/rtl-sdr/sass-assembler/build/test_huntian_integration
+/data/rtl-sdr/sass-assembler/build/Release/test_huntian_integration
+/data/rtl-sdr/sass-assembler/build/Release/test_huntian_integration
+/data/rtl-sdr/sass-assembler/build/Debug/test_huntian_integration
+/data/rtl-sdr/sass-assembler/build/Debug/test_huntian_integration
+/data/rtl-sdr/sass-assembler/build/MinSizeRel/test_huntian_integration
+/data/rtl-sdr/sass-assembler/build/MinSizeRel/test_huntian_integration
+/data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_huntian_integration
+/data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_huntian_integration
+/data/rtl-sdr/sass-assembler/build/Deployment/test_huntian_integration
+/data/rtl-sdr/sass-assembler/build/Deployment/test_huntian_integration
+/data/rtl-sdr/sass-assembler/build/Development/test_huntian_integration
+/data/rtl-sdr/sass-assembler/build/Development/test_huntian_integration
+data/rtl-sdr/sass-assembler/build/test_huntian_integration
+data/rtl-sdr/sass-assembler/build/test_huntian_integration
+data/rtl-sdr/sass-assembler/build/Release/test_huntian_integration
+data/rtl-sdr/sass-assembler/build/Release/test_huntian_integration
+data/rtl-sdr/sass-assembler/build/Debug/test_huntian_integration
+data/rtl-sdr/sass-assembler/build/Debug/test_huntian_integration
+data/rtl-sdr/sass-assembler/build/MinSizeRel/test_huntian_integration
+data/rtl-sdr/sass-assembler/build/MinSizeRel/test_huntian_integration
+data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_huntian_integration
+data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_huntian_integration
+data/rtl-sdr/sass-assembler/build/Deployment/test_huntian_integration
+data/rtl-sdr/sass-assembler/build/Deployment/test_huntian_integration
+data/rtl-sdr/sass-assembler/build/Development/test_huntian_integration
+data/rtl-sdr/sass-assembler/build/Development/test_huntian_integration
+12/21 Test #12: HuntianIntegrationTests ..........***Not Run   0.00 sec
+      Start 13: PascalVerifyTests
+Could not find executable /data/rtl-sdr/sass-assembler/build/test_pascal_verify
+Looked in the following places:
+/data/rtl-sdr/sass-assembler/build/test_pascal_verify
+/data/rtl-sdr/sass-assembler/build/test_pascal_verify
+/data/rtl-sdr/sass-assembler/build/Release/test_pascal_verify
+/data/rtl-sdr/sass-assembler/build/Release/test_pascal_verify
+/data/rtl-sdr/sass-assembler/build/Debug/test_pascal_verify
+/data/rtl-sdr/sass-assembler/build/Debug/test_pascal_verify
+/data/rtl-sdr/sass-assembler/build/MinSizeRel/test_pascal_verify
+/data/rtl-sdr/sass-assembler/build/MinSizeRel/test_pascal_verify
+/data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_pascal_verify
+/data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_pascal_verify
+/data/rtl-sdr/sass-assembler/build/Deployment/test_pascal_verify
+/data/rtl-sdr/sass-assembler/build/Deployment/test_pascal_verify
+/data/rtl-sdr/sass-assembler/build/Development/test_pascal_verify
+/data/rtl-sdr/sass-assembler/build/Development/test_pascal_verify
+data/rtl-sdr/sass-assembler/build/test_pascal_verify
+data/rtl-sdr/sass-assembler/build/test_pascal_verify
+data/rtl-sdr/sass-assembler/build/Release/test_pascal_verify
+data/rtl-sdr/sass-assembler/build/Release/test_pascal_verify
+data/rtl-sdr/sass-assembler/build/Debug/test_pascal_verify
+data/rtl-sdr/sass-assembler/build/Debug/test_pascal_verify
+data/rtl-sdr/sass-assembler/build/MinSizeRel/test_pascal_verify
+data/rtl-sdr/sass-assembler/build/MinSizeRel/test_pascal_verify
+data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_pascal_verify
+data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_pascal_verify
+data/rtl-sdr/sass-assembler/build/Deployment/test_pascal_verify
+data/rtl-sdr/sass-assembler/build/Deployment/test_pascal_verify
+data/rtl-sdr/sass-assembler/build/Development/test_pascal_verify
+data/rtl-sdr/sass-assembler/build/Development/test_pascal_verify
+13/21 Test #13: PascalVerifyTests ................***Not Run   0.00 sec
+      Start 14: VoltaBackendTests
+Could not find executable /data/rtl-sdr/sass-assembler/build/test_volta_backend
+Looked in the following places:
+/data/rtl-sdr/sass-assembler/build/test_volta_backend
+/data/rtl-sdr/sass-assembler/build/test_volta_backend
+/data/rtl-sdr/sass-assembler/build/Release/test_volta_backend
+/data/rtl-sdr/sass-assembler/build/Release/test_volta_backend
+/data/rtl-sdr/sass-assembler/build/Debug/test_volta_backend
+/data/rtl-sdr/sass-assembler/build/Debug/test_volta_backend
+/data/rtl-sdr/sass-assembler/build/MinSizeRel/test_volta_backend
+/data/rtl-sdr/sass-assembler/build/MinSizeRel/test_volta_backend
+/data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_volta_backend
+/data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_volta_backend
+/data/rtl-sdr/sass-assembler/build/Deployment/test_volta_backend
+/data/rtl-sdr/sass-assembler/build/Deployment/test_volta_backend
+/data/rtl-sdr/sass-assembler/build/Development/test_volta_backend
+/data/rtl-sdr/sass-assembler/build/Development/test_volta_backend
+data/rtl-sdr/sass-assembler/build/test_volta_backend
+data/rtl-sdr/sass-assembler/build/test_volta_backend
+data/rtl-sdr/sass-assembler/build/Release/test_volta_backend
+data/rtl-sdr/sass-assembler/build/Release/test_volta_backend
+data/rtl-sdr/sass-assembler/build/Debug/test_volta_backend
+data/rtl-sdr/sass-assembler/build/Debug/test_volta_backend
+data/rtl-sdr/sass-assembler/build/MinSizeRel/test_volta_backend
+data/rtl-sdr/sass-assembler/build/MinSizeRel/test_volta_backend
+data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_volta_backend
+data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_volta_backend
+data/rtl-sdr/sass-assembler/build/Deployment/test_volta_backend
+data/rtl-sdr/sass-assembler/build/Deployment/test_volta_backend
+data/rtl-sdr/sass-assembler/build/Development/test_volta_backend
+data/rtl-sdr/sass-assembler/build/Development/test_volta_backend
+14/21 Test #14: VoltaBackendTests ................***Not Run   0.00 sec
+      Start 15: AmpereBackendTests
+Could not find executable /data/rtl-sdr/sass-assembler/build/test_ampere_backend
+Looked in the following places:
+/data/rtl-sdr/sass-assembler/build/test_ampere_backend
+/data/rtl-sdr/sass-assembler/build/test_ampere_backend
+/data/rtl-sdr/sass-assembler/build/Release/test_ampere_backend
+/data/rtl-sdr/sass-assembler/build/Release/test_ampere_backend
+/data/rtl-sdr/sass-assembler/build/Debug/test_ampere_backend
+/data/rtl-sdr/sass-assembler/build/Debug/test_ampere_backend
+/data/rtl-sdr/sass-assembler/build/MinSizeRel/test_ampere_backend
+/data/rtl-sdr/sass-assembler/build/MinSizeRel/test_ampere_backend
+/data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_ampere_backend
+/data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_ampere_backend
+/data/rtl-sdr/sass-assembler/build/Deployment/test_ampere_backend
+/data/rtl-sdr/sass-assembler/build/Deployment/test_ampere_backend
+/data/rtl-sdr/sass-assembler/build/Development/test_ampere_backend
+/data/rtl-sdr/sass-assembler/build/Development/test_ampere_backend
+data/rtl-sdr/sass-assembler/build/test_ampere_backend
+data/rtl-sdr/sass-assembler/build/test_ampere_backend
+data/rtl-sdr/sass-assembler/build/Release/test_ampere_backend
+data/rtl-sdr/sass-assembler/build/Release/test_ampere_backend
+data/rtl-sdr/sass-assembler/build/Debug/test_ampere_backend
+data/rtl-sdr/sass-assembler/build/Debug/test_ampere_backend
+data/rtl-sdr/sass-assembler/build/MinSizeRel/test_ampere_backend
+data/rtl-sdr/sass-assembler/build/MinSizeRel/test_ampere_backend
+data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_ampere_backend
+data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_ampere_backend
+data/rtl-sdr/sass-assembler/build/Deployment/test_ampere_backend
+data/rtl-sdr/sass-assembler/build/Deployment/test_ampere_backend
+data/rtl-sdr/sass-assembler/build/Development/test_ampere_backend
+data/rtl-sdr/sass-assembler/build/Development/test_ampere_backend
+15/21 Test #15: AmpereBackendTests ...............***Not Run   0.00 sec
+      Start 16: VoltaEncodeTests
+Could not find executable /data/rtl-sdr/sass-assembler/build/test_volta_encode
+Looked in the following places:
+/data/rtl-sdr/sass-assembler/build/test_volta_encode
+/data/rtl-sdr/sass-assembler/build/test_volta_encode
+/data/rtl-sdr/sass-assembler/build/Release/test_volta_encode
+/data/rtl-sdr/sass-assembler/build/Release/test_volta_encode
+/data/rtl-sdr/sass-assembler/build/Debug/test_volta_encode
+/data/rtl-sdr/sass-assembler/build/Debug/test_volta_encode
+/data/rtl-sdr/sass-assembler/build/MinSizeRel/test_volta_encode
+/data/rtl-sdr/sass-assembler/build/MinSizeRel/test_volta_encode
+/data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_volta_encode
+/data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_volta_encode
+/data/rtl-sdr/sass-assembler/build/Deployment/test_volta_encode
+/data/rtl-sdr/sass-assembler/build/Deployment/test_volta_encode
+/data/rtl-sdr/sass-assembler/build/Development/test_volta_encode
+/data/rtl-sdr/sass-assembler/build/Development/test_volta_encode
+data/rtl-sdr/sass-assembler/build/test_volta_encode
+data/rtl-sdr/sass-assembler/build/test_volta_encode
+data/rtl-sdr/sass-assembler/build/Release/test_volta_encode
+data/rtl-sdr/sass-assembler/build/Release/test_volta_encode
+data/rtl-sdr/sass-assembler/build/Debug/test_volta_encode
+data/rtl-sdr/sass-assembler/build/Debug/test_volta_encode
+data/rtl-sdr/sass-assembler/build/MinSizeRel/test_volta_encode
+data/rtl-sdr/sass-assembler/build/MinSizeRel/test_volta_encode
+data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_volta_encode
+data/rtl-sdr/sass-assembler/build/RelWithDebInfo/test_volta_encode
+data/rtl-sdr/sass-assembler/build/Deployment/test_volta_encode
+data/rtl-sdr/sass-assembler/build/Deployment/test_volta_encode
+data/rtl-sdr/sass-assembler/build/Development/test_volta_encode
+data/rtl-sdr/sass-assembler/build/Development/test_volta_encode
+16/21 Test #16: VoltaEncodeTests .................***Not Run   0.00 sec
+      Start 17:
+
+[… truncated 9478 chars …]

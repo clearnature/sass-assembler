@@ -1,0 +1,11 @@
+=== HunTian SASS vs nvcc Benchmark ===
+Date: 2026年 05月 29日 星期五 22:01:45 CST
+
+--- ht-as (HunTian SASS Assembler) ---
+  full_isa_test            8 ms     384 bytes
+  gemm_16x16              10 ms     216 bytes
+
+--- nvcc + ptxas (NVIDIA) ---
+  gemm_16x16 (nvcc)      712 ms    4776 bytes
+         nvcc SASS lines: 351
+
