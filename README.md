@@ -35,8 +35,7 @@ HunTian SASS 汇编器是一个**超越 ptxas** 的下一代 GPU 指令编译器
 | 架构支持 | sm_61→sm_100 | sm_61→sm_100 (7架构) |
 | 优化 | 寄存器分配+调度 | 4320D流形+P0/P1/P2优化管线 |
 | VAVX3 融合 | 无 | 8:1 (FFMA/XMAD) |
-| GPU验证 (NVIDIA) | ✅ | ✅ GTX1060 (SASS→cubin) |
-| GPU验证 (AMD) | ✅ | ✅ RX 9060 XT (HIP kernel, hip_tuner) |
+| GPU验证 | ✅ | ✅ GTX1060 + RX 9060 XT (NVIDIA SASS→cubin + AMD HIP) |
 | 开源 | ❌ | ✅ MIT |
 
 ## 项目结构
