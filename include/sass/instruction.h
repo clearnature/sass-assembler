@@ -194,6 +194,65 @@ enum class Opcode : uint16_t {
     CCTL    = 0x78,  // Cache Control
     CCTLL   = 0x79,  // Cache Control Local
 
+
+    // ─── AMD RDNA4 矩阵指令 (0x88-0x9F) ───
+    SWMMAC_F32_F16     = 0x88,  // v_swmmac_f32_16x16x32_f16
+    SWMMAC_F32_BF16    = 0x89,  // v_swmmac_f32_16x16x32_bf16
+    SWMMAC_F32_FP8     = 0x8A,  // v_swmmac_f32_16x16x32_fp8
+    SWMMAC_I32_IU4     = 0x8B,  // v_swmmac_i32_16x16x64_iu4
+    SWMMAC_I32_IU8     = 0x8C,  // v_swmmac_i32_16x16x32_iu8
+    SWMMAC_F16_F16     = 0x8D,  // v_swmmac_f16_16x16x32_f16
+    SWMMAC_BF16_BF16   = 0x8E,  // v_swmmac_bf16_16x16x32_bf16
+    MFMA_F32_F16       = 0x8F,  // v_mfma_f32_16x16x16_f16
+    MFMA_F32_BF16      = 0x90,  // v_mfma_f32_16x16x16_bf16
+    MFMA_I32_I8        = 0x91,  // v_mfma_i32_16x16x32_i8
+    MFMA_F32_FP8       = 0x92,  // v_mfma_f32_16x16x32_fp8
+    WMMA_F32_F16       = 0x93,  // v_wmma_f32_16x16x16_f16
+    WMMA_I32_I8        = 0x94,  // v_wmma_i32_16x16x16_iu8
+    WMMA_F32_BF16      = 0x95,  // v_wmma_f32_16x16x16_bf16
+    
+    // ─── AMD DPP/数据并行指令 (0x96-0x9F) ───
+    V_DPP_ADD          = 0x96,  // v_add_f32_dpp
+    V_DPP_MUL          = 0x97,  // v_mul_f32_dpp
+    V_DPP_FMA          = 0x98,  // v_fmac_f32_dpp
+    V_PERMLANE16       = 0x99,  // v_permlane16_b32
+    V_PERMLANEX16      = 0x9A,  // v_permlanex16_b32
+    IMAGE_SAMPLE       = 0x9B,  // image_sample
+    IMAGE_LOAD         = 0x9C,  // image_load
+    IMAGE_STORE        = 0x9D,  // image_store
+    EXPORT_MRTZ        = 0x9E,  // exp mrtz
+    INTERP_P1_P2       = 0x9F,  // v_interp_p1_f32 / v_interp_p2_f32
+    
+    // ─── AMD VALU 高级指令 (0xA0-0xAF) ───
+    V_BFE_U32          = 0xA0,  // v_bfe_u32
+    V_BFI_U32          = 0xA1,  // v_bfi_u32
+    V_PERM_B32         = 0xA2,  // v_perm_b32
+    V_SWAP_B32         = 0xA3,  // v_swap_b32
+    V_PACK_LL          = 0xA4,  // v_pack_ll_b32
+    V_PACK_LH          = 0xA5,  // v_pack_lh_b32
+    V_ALIGNBIT         = 0xA6,  // v_alignbit_b32
+    V_ALIGNBYTE        = 0xA7,  // v_alignbyte_b32
+    V_SAD_U32          = 0xA8,  // v_sad_u32
+    V_QSAD_U32         = 0xA9,  // v_qsad_u32
+    V_MQSAD_U32        = 0xAA,  // v_mqsad_u32
+    V_DOT4_I32_I8      = 0xAB,  // v_dot4_i32_i8
+    V_DOT8_I32_I4      = 0xAC,  // v_dot8_i32_i4
+    BITOP3_B32         = 0xAD,  // v_bitop3_b32
+    
+    // ─── AMD 标量/控制/内存指令 (0xB0-0xBF) ───
+    S_GETPC_B64        = 0xB0,  // s_getpc_b64
+    S_SETPC_B64        = 0xB1,  // s_setpc_b64
+    S_CBRANCH          = 0xB2,  // s_cbranch
+    S_SLEEP            = 0xB3,  // s_sleep
+    S_SETPRIO          = 0xB4,  // s_setprio
+    S_SENDMSG          = 0xB5,  // s_sendmsg
+    DS_PERMUTE_B32     = 0xB6,  // ds_permute_b32
+    DS_SWIZZLE_B32     = 0xB7,  // ds_swizzle_b32
+    DS_BPERMUTE_B32    = 0xB8,  // ds_bpermute_b32
+    V_CMPSX_F32        = 0xB9,  // v_cmpx_*_f32
+    V_CNDMASK_B32      = 0xBA,  // v_cndmask_b32
+    V_READLANE_B32     = 0xBB,  // v_readlane_b32
+    V_WRITELANE_B32    = 0xBC,  // v_writelane_b32
     // ─── HunTian VAVX3 扩展 (0xF0-0xF7) ───
     VAVX3_ADD_512   = 0xF0,
     VAVX3_MUL_512   = 0xF1,
