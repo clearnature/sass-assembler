@@ -22,3 +22,7 @@ cmake-build-*/
 # 系统
 .DS_Store
 Thumbs.db
+
+.claude/
+.gitnexus/
+.reasonix/
