@@ -203,13 +203,13 @@ enum class Opcode : uint16_t {
     SWMMAC_I32_IU8     = 0x8C,  // v_swmmac_i32_16x16x32_iu8
     SWMMAC_F16_F16     = 0x8D,  // v_swmmac_f16_16x16x32_f16
     SWMMAC_BF16_BF16   = 0x8E,  // v_swmmac_bf16_16x16x32_bf16
-    MFMA_F32_F16       = 0x8F,  // v_mfma_f32_16x16x16_f16
-    MFMA_F32_BF16      = 0x90,  // v_mfma_f32_16x16x16_bf16
-    MFMA_I32_I8        = 0x91,  // v_mfma_i32_16x16x32_i8
-    MFMA_F32_FP8       = 0x92,  // v_mfma_f32_16x16x32_fp8
-    WMMA_F32_F16       = 0x93,  // v_wmma_f32_16x16x16_f16
-    WMMA_I32_I8        = 0x94,  // v_wmma_i32_16x16x16_iu8
-    WMMA_F32_BF16      = 0x95,  // v_wmma_f32_16x16x16_bf16
+    WMMA_F32_F16       = 0x8F,  // v_wmma_f32_16x16x16_f16
+    WMMA_F32_BF16      = 0x90,  // v_wmma_f32_16x16x16_bf16
+    WMMA_F16_F16       = 0x91,  // v_wmma_f16_16x16x16_f16
+    WMMA_BF16_BF16     = 0x92,  // v_wmma_bf16_16x16x16_bf16
+    WMMA_I32_IU8       = 0x93,  // v_wmma_i32_16x16x16_iu8
+    WMMA_I32_IU4       = 0x94,  // v_wmma_i32_16x16x16_iu4
+    WMMA_F32_FP8_FP8   = 0x95,  // v_wmma_f32_16x16x16_fp8_fp8
     
     // ─── AMD DPP/数据并行指令 (0x96-0x9F) ───
     V_DPP_ADD          = 0x96,  // v_add_f32_dpp
