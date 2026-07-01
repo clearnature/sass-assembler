@@ -35,8 +35,7 @@ public:
         if (vr.max_reg_seen >= 48) diags_.push_back(Diagnostic::warn(
             "high register pressure: R"+std::to_string(vr.max_reg_seen)));
 
-        optimizer::optimize_p1(seq);
-        if (opt_reg_alloc) optimizer::reg_allocate(seq);
+        optimizer::optimize_p1(seq);  // 已内含 reg_allocate (阈值保护短序列)
 
         std::vector<SASSWord> code; code.reserve(seq.size());
         for (size_t i=0;i<seq.size();i++) {

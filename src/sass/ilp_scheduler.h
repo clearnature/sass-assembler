@@ -52,30 +52,37 @@ public:
     }
 
     // 主要调度算法
+    // 每轮 cycle 重建就绪队列, 按 index 升序优先发射 (保持原始相对顺序).
+    // 这样依赖链上的指令一旦就绪就优先于后排独立指令被发射,
+    // 实现真正的交错延迟隐藏, 而非把独立指令集中发射.
     void schedule(std::vector<Instruction>& insts) {
         if (insts.size() < 3) return;  // 太小, 不需要调度
 
         std::vector<Instruction> result;
-        std::deque<size_t> ready;  // 就绪队列
         std::vector<bool> scheduled(insts.size(), false);
         std::vector<int> issue_cycle(insts.size(), -1);
+        std::vector<size_t> ready;  // 每轮重建的就绪队列
 
         int cycle = 0;
         size_t scheduled_count = 0;
+        int stall_cycles = 0;
 
         while (scheduled_count < insts.size()) {
-            // 找出所有操作数就绪的指令
+            // 每轮 cycle 清空并重建就绪队列
+            ready.clear();
             for (size_t i = 0; i < insts.size(); i++) {
                 if (scheduled[i]) continue;
                 if (operands_ready(insts[i], cycle)) {
                     ready.push_back(i);
                 }
             }
+            // 按原始 index 升序: 链式指令(小 index)一旦就绪优先发射
+            std::sort(ready.begin(), ready.end());
 
             // 发射最多 issue_width 条指令
             int issued = 0;
-            while (!ready.empty() && issued < issue_width) {
-                size_t idx = ready.front(); ready.pop_front();
+            for (size_t pick = 0; pick < ready.size() && issued < issue_width; pick++) {
+                size_t idx = ready[pick];
                 if (scheduled[idx]) continue;
 
                 result.push_back(insts[idx]);
@@ -87,17 +94,8 @@ public:
             }
 
             if (issued == 0 && scheduled_count < insts.size()) {
-                // 无就绪指令, 强制发射第一条未调度的
-                for (size_t i = 0; i < insts.size(); i++) {
-                    if (!scheduled[i]) {
-                        result.push_back(insts[i]);
-                        issue_cycle[i] = cycle;
-                        update_register_state(insts[i], cycle);
-                        scheduled[i] = true;
-                        scheduled_count++;
-                        break;
-                    }
-                }
+                // 无就绪指令 (长延迟依赖), 推进周期等待
+                stall_cycles++;
             }
             cycle++;
         }

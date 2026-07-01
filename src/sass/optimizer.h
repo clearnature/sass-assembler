@@ -87,16 +87,77 @@ inline void const_propagation(std::vector<Instruction>& insts) {
 }
 
 // ═══ P2: 循环展开 ═══
-// 检测 BRA 回边 → 展开循环体 (因子2)
+// 检测 IADD counter; ISETP; @P0 BRA 回边 → 复制循环体 (factor=2)
+// 在 IADD 前插入循环体副本, 步进立即数 ×factor, 减少分支开销.
 inline void loop_unroll(std::vector<Instruction>& insts, int factor=2) {
-    for (size_t i=0; i+2<insts.size(); i++) {
-        // 模式: IADD counter; ISETP; @P0 BRA → 循环
+    size_t i = 0;
+    while (i + 2 < insts.size()) {
         if (insts[i].opcode==Opcode::IADD &&
             insts[i+1].opcode==Opcode::ISETP &&
             insts[i+2].opcode==Opcode::BRA) {
-            // 展开: 在BRA前插入循环体的副本
-            // (简化: 降低复杂度分数, 标记可展开)
-            insts[i].complexity_score *= 0.7;
+            // 估算循环体: IADD 前 body_size 条指令 (默认 4, 不超过 i)
+            int body_size = std::min((int)i, 4);
+            if (body_size == 0) { i++; continue; }
+            // 安全检查: 循环体内不能有 BRA/BRX (嵌套循环不展开)
+            bool safe = true;
+            for (int j = (int)i - body_size; j < (int)i; j++) {
+                if (j < 0 || insts[j].opcode == Opcode::BRA ||
+                    insts[j].opcode == Opcode::BRX) { safe = false; break; }
+            }
+            if (!safe) {
+                insts[i].complexity_score *= 0.7;  // 标记可展开但跳过
+                i++; continue;
+            }
+            // 插入循环体副本到 IADD 前
+            std::vector<Instruction> copy(
+                insts.begin() + i - body_size,
+                insts.begin() + i);
+            insts.insert(insts.begin() + i, copy.begin(), copy.end());
+            // IADD 步进立即数 ×factor (如 IADD R0, R0, #1 → #2)
+            Instruction& iadd = insts[i + body_size];
+            if (iadd.operands.size() >= 3 &&
+                iadd.operands[2].type == OpType::IMM) {
+                iadd.operands[2].imm_val *= factor;
+            }
+            iadd.complexity_score *= 0.7;  // 标记已展开
+            // 跳过已处理的副本 + 原三指令
+            i += body_size + 3;
+        } else {
+            i++;
+        }
+    }
+}
+
+// ═══ P1: Bank 冲突避免 ═══
+// GP106: 32 banks × 4B. 连续 LDS/STS 访问同一 bank → 串行化 (4.85x 减速).
+// 策略: 检测相邻同 bank 访问, 在中间插入一条非内存指令打散冲突.
+inline void avoid_bank_conflicts(std::vector<Instruction>& insts) {
+    constexpr int NUM_BANKS = 32;
+    auto get_bank = [](const Instruction& inst) -> int {
+        for (auto& op : inst.operands) {
+            if (op.type == OpType::MEM) return (op.mem.offset / 4) % NUM_BANKS;
+        }
+        return -1;
+    };
+    auto is_smem = [](const Instruction& inst) {
+        return inst.opcode == Opcode::LDS || inst.opcode == Opcode::STS;
+    };
+
+    for (size_t i = 0; i + 1 < insts.size(); i++) {
+        if (!is_smem(insts[i]) || !is_smem(insts[i+1])) continue;
+        int b1 = get_bank(insts[i]);
+        int b2 = get_bank(insts[i+1]);
+        if (b1 < 0 || b1 != b2) continue;
+        // 冲突: 向后找一条非内存、非分支指令插入到 i 和 i+1 之间
+        for (size_t j = i + 2; j < std::min(i + 6, insts.size()); j++) {
+            if (is_smem(insts[j])) continue;
+            if (insts[j].opcode == Opcode::BRA || insts[j].opcode == Opcode::BRX ||
+                insts[j].opcode == Opcode::ISETP || insts[j].opcode == Opcode::EXIT)
+                continue;
+            Instruction tmp = std::move(insts[j]);
+            insts.erase(insts.begin() + j);
+            insts.insert(insts.begin() + i + 1, std::move(tmp));
+            break;
         }
     }
 }
@@ -122,11 +183,13 @@ inline std::vector<patterns::Pattern> analyze_patterns(const std::vector<uint64_
 
 // ═══ P1 ILP 调度 ═══
 inline void optimize_p1(std::vector<Instruction>& insts) {
-    optimize_p0(insts);          // 先做 P0
-    const_propagation(insts);    // P1-3: 常量传播
-    ilp_schedule(insts);         // P1-1: ILP指令调度
-    predicate_optimize(insts);   // P2: 谓词优化
-    loop_unroll(insts);          // P2: 循环展开检测
+    optimize_p0(insts);              // 先做 P0
+    const_propagation(insts);        // P1-3: 常量传播
+    loop_unroll(insts);              // P2: 循环展开 (先展开增加 ILP 机会)
+    reg_allocate(insts);             // P1-2: 寄存器分配 (基于展开后的代码)
+    ilp_schedule(insts);             // P1-1: ILP指令调度 (基于物理寄存器依赖)
+    avoid_bank_conflicts(insts);     // P1: Bank 冲突避免 (调度后局部重排)
+    predicate_optimize(insts);       // P2: 谓词优化
     scoreboard::insert_depbars(insts); // P2: DEPBAR自动插入
 }
 

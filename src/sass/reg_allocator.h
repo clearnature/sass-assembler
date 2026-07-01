@@ -33,7 +33,7 @@ class RegisterAllocator {
 public:
     // 重命名寄存器以减少冲突
     void allocate(std::vector<Instruction>& insts) {
-        if (insts.empty()) return;
+        if (insts.size() < 8) return;  // 短序列寄存器压力低, 无需重命名
 
         // 1. 计算活跃区间
         std::unordered_map<int, LiveRange> ranges;
