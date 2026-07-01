@@ -64,7 +64,7 @@ enum class AmdOpClass : uint8_t {
 struct RDNA4InstInfo {
     const char* mnemonic;      // AMD GPU 汇编助记符
     AmdEncFamily family;       // 编码家族
-    uint8_t  opcode;           // 家族内操作码
+    uint16_t opcode;           // 家族内操作码 (VOP3 可达 0x1C0+)
     uint8_t  num_src;          // 源操作数数量
     uint8_t  num_dst;          // 目标操作数数量
     uint16_t latency;          // 延迟 (wavefront 周期)

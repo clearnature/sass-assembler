@@ -17,23 +17,28 @@ target_include_directories(ggml_quants PUBLIC
     ${MATH_INCLUDE_DIR}
 )
 
-# ─── CPU 融合算子库 ───
-add_library(ggml_fused STATIC
-    cpu/ggml_fused.c
-    cpu/ggml_fused_attn.c
-    cpu/ggml_fused_attn_blas.c
-    cpu/ggml_fused_gate.c
-    cpu/ggml_fused_norm.c
-    cpu/ggml_fused_rope.c
-    cpu/ggml_sparse.c
-    cpu/ggml_final.c
-)
-target_include_directories(ggml_fused PUBLIC
-    ${CMAKE_CURRENT_SOURCE_DIR}
-    ${CMAKE_CURRENT_SOURCE_DIR}/cpu
-    ${MATH_INCLUDE_DIR}
-)
-target_link_libraries(ggml_fused PRIVATE m openblas)
+# ─── CPU 融合算子库 (需要 OpenBLAS, 缺失时跳过) ───
+find_package(BLAS QUIET)
+if(BLAS_FOUND)
+    add_library(ggml_fused STATIC
+        cpu/ggml_fused.c
+        cpu/ggml_fused_attn.c
+        cpu/ggml_fused_attn_blas.c
+        cpu/ggml_fused_gate.c
+        cpu/ggml_fused_norm.c
+        cpu/ggml_fused_rope.c
+        cpu/ggml_sparse.c
+        cpu/ggml_final.c
+    )
+    target_include_directories(ggml_fused PUBLIC
+        ${CMAKE_CURRENT_SOURCE_DIR}
+        ${CMAKE_CURRENT_SOURCE_DIR}/cpu
+        ${MATH_INCLUDE_DIR}
+    )
+    target_link_libraries(ggml_fused PRIVATE m ${BLAS_LIBRARIES})
+else()
+    message(STATUS "OpenBLAS 未找到, 跳过 ggml_fused 融合算子库 (可选组件)")
+endif()
 
 # ─── CUDA 后端 (可选) ───
 if(CMAKE_CUDA_COMPILER)
